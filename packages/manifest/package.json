@@ -1,0 +1,16 @@
+{
+  "name": "tce-manifest",
+  "description": "Content element manifest",
+  "author": "ExtensionEngine <info@extensionengine.com>",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --build",
+    "lint": "eslint --ext .js,.ts .",
+    "lint:fix": "pnpm lint --fix"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "tce-edit",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "lint": "eslint --ext .js,.ts,.vue .",
+    "lint:fix": "pnpm lint --fix"
+  },
+  "dependencies": {
+    "vue": "^2.7.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue2": "^2.2.0",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.5",
+    "vue-tsc": "^1.8.5"
+  }
+}

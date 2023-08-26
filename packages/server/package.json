@@ -1,0 +1,30 @@
+{
+  "name": "tce-server",
+  "description": "Content element server module",
+  "author": "ExtensionEngine <info@extensionengine.com>",
+  "version": "0.0.1",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "exports": {
+    "require": "./dist/index.js",
+    "import": "./dist/index.mjs"
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build-fast": "tsup src/index.ts --format cjs,esm",
+    "build": "pnpm run build-fast -- --dts-resolve",
+    "lint": "eslint --ext .js,.ts .",
+    "lint:fix": "pnpm lint --fix"
+  },
+  "devDependencies": {
+    "tce-manifest": "workspace:*",
+    "tsup": "^7.2.0",
+    "typescript": "^5.1.6"
+  }
+}
