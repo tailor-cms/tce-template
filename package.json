@@ -1,5 +1,5 @@
 {
-  "name": "tce-template",
+  "name": "@tailor-cms/tce-template",
   "description": "Content element template",
   "version": "0.0.1",
   "author": "ExtensionEngine <info@extensionengine.com>",
@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@npmcli/package-json": "^2.0.0",
-    "@tailor-cms/tce-boot": "0.0.3",
+    "@tailor-cms/tce-boot": "0.0.6",
     "@types/node": "^20.5.6",
     "@typescript-eslint/eslint-plugin": ">=6.4.0",
     "@typescript-eslint/parser": ">=6.4.0",
