@@ -7,10 +7,11 @@
   "type": "module",
   "scripts": {
     "build": "tsc --build",
-    "lint": "eslint --ext .js,.ts .",
+    "lint": "./node_modules/.bin/eslint --ext .js,.ts .",
     "lint:fix": "pnpm lint --fix"
   },
   "devDependencies": {
+    "@tailor-cms/eslint-config": "0.0.2",
     "typescript": "^5.1.6"
   }
 }

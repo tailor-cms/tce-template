@@ -19,10 +19,11 @@
   "scripts": {
     "build-fast": "tsup src/index.ts --format cjs,esm",
     "build": "pnpm run build-fast -- --dts-resolve",
-    "lint": "eslint --ext .js,.ts .",
+    "lint": "./node_modules/.bin/eslint --ext .js,.ts .",
     "lint:fix": "pnpm lint --fix"
   },
   "devDependencies": {
+    "@tailor-cms/eslint-config": "0.0.2",
     "tce-manifest": "workspace:*",
     "tsup": "^7.2.0",
     "typescript": "^5.1.6"

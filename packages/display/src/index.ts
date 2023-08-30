@@ -1,6 +1,7 @@
-import { info, initState } from '../index.js';
+import { info, initState } from 'tce-manifest';
+import { ElementManifest } from 'tce-manifest/dist/interfaces';
+
 import Display from './components/Display.vue';
-import { ElementManifest } from '../interfaces';
 
 const manifest: ElementManifest = {
   ...info,

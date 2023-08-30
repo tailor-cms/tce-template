@@ -1,3 +1,5 @@
+export interface ElementData {}
+
 export interface Element {
   id: number;
   uid: string;
@@ -16,8 +18,6 @@ export interface Element {
   updatedAt: string;
   deletedAt: string | null;
 }
-
-export interface ElementData {}
 
 export type DataInitializer = () => ElementData;
 
