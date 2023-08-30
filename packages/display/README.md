@@ -1,1 +1,1 @@
-# Tailor content element Display component
+# Content element `Display` component

@@ -1,18 +1,11 @@
-import { info, initState } from 'tce-manifest';
-import { ElementManifest } from 'tce-manifest/dist/interfaces';
+import baseManifest from 'tce-manifest';
+import type { ElementManifest } from 'tce-manifest';
 
 import Display from './components/Display.vue';
 
 const manifest: ElementManifest = {
-  ...info,
-  initState,
+  ...baseManifest,
   Display,
-  ui: {
-    icon: 'mdi-help-circle',
-    forceFullWidth: true,
-  },
 };
 
 export default manifest;
-
-export { Display };

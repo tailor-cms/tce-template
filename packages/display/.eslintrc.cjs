@@ -9,10 +9,13 @@ module.exports = {
     project: ['./tsconfig.json', './tsconfig.node.json'],
     extraFileExtensions: ['vue'],
   },
-  ignorePatterns: ['**/components.d.ts'],
+  ignorePatterns: ['**/components.d.ts', 'dist/**'],
   rules: {
-    'vue/multi-word-component-names': ['error', {
-      'ignores': ['Display']
-    }]
-  }
+    'vue/multi-word-component-names': [
+      'error',
+      {
+        ignores: ['Display'],
+      },
+    ],
+  },
 };
