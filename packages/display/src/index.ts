@@ -9,3 +9,4 @@ const manifest: ElementManifest = {
 };
 
 export default manifest;
+export { Display };

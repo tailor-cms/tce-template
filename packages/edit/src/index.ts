@@ -13,3 +13,4 @@ const manifest: ElementManifest = {
 };
 
 export default manifest;
+export { Edit, SideToolbar, TopToolbar };
