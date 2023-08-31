@@ -19,7 +19,7 @@
     "lint": "eslint --ext .js,.ts,.vue ./src",
     "lint:fix": "pnpm lint --fix"
   },
-  "dependencies": {
+  "peerDependencies": {
     "vue": "^3.3.4"
   },
   "devDependencies": {

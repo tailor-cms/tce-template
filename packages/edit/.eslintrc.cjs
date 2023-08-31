@@ -11,8 +11,11 @@ module.exports = {
   },
   ignorePatterns: ['**/components.d.ts', 'dist/**'],
   rules: {
-    'vue/multi-word-component-names': ['error', {
-      'ignores': ['Edit']
-    }]
-  }
+    'vue/multi-word-component-names': [
+      'error',
+      {
+        ignores: ['Edit'],
+      },
+    ],
+  },
 };

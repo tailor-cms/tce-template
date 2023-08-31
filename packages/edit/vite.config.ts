@@ -10,7 +10,10 @@ export default defineConfig({
       entry: resolve(__dirname, './src/index.ts'),
       name: 'Edit',
       fileName: 'index',
+      formats: ['es', 'cjs'],
     },
+    minify: false,
+    cssCodeSplit: false,
   },
   plugins: [vue()],
 });

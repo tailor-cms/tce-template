@@ -1,1 +1,1 @@
-# Tailor content element Edit component
+# Content element `Edit` component
