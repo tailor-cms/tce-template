@@ -33,3 +33,5 @@ export default {
   afterLoaded,
   afterRetrieve,
 };
+
+export { type, initState };
