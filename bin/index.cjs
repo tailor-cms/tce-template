@@ -25,6 +25,7 @@ async function cloneRepository() {
   shell.echo(formatSuccessLog("1/4 Cloning respository"));
   const name = await getPackageName();
   await degit("tailor-cms/tce-template", { mode: "git" }).clone(name);
+  shell.cd(`./${name}`);
   await updatePackageJson({ name });
 }
 
