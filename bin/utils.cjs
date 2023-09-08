@@ -55,8 +55,8 @@ async function updatePackageJson(data) {
     const pkgJson = await PackageJson.load("./");
     pkgJson.update(data);
     await pkgJson.save();
-  } catch {
-    exitOnError("Error updating package.json");
+  } catch (err) {
+    exitOnError("Error updating package.json: " + err.message);
   }
 }
 
