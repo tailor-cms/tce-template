@@ -1,0 +1,23 @@
+name: Lint
+on:
+  push:
+    branches: [develop]
+  pull_request:
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.7.4
+      - name: Setup node to enable caching
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.6
+          cache: 'pnpm'
+          cache-dependency-path: './pnpm-lock.yaml'
+      - name: Install dependencies
+        run: pnpm i
+      - name: Run linter
+        run: pnpm lint
