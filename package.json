@@ -1,7 +1,7 @@
 {
   "name": "@tailor-cms/tce-template",
   "description": "Content element template",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "ExtensionEngine <info@extensionengine.com>",
   "type": "module",
   "exports": {
@@ -27,19 +27,21 @@
   "bin": {
     "@tailor-cms/tce-template": "bin/index.cjs"
   },
-  "devDependencies": {
+  "dependencies": {
     "@npmcli/package-json": "^2.0.0",
-    "@tailor-cms/eslint-config": "0.0.2",
-    "@tailor-cms/tce-boot": "0.0.16",
-    "@types/node": "^20.5.7",
     "chalk": "^4.1.2",
     "degit": "^2.8.4",
     "enquirer": "^2.4.1",
     "has-flag": "^5.0.1",
-    "prettier": "^2.7.1",
     "shelljs": "^0.8.5",
+    "validate-npm-package-name": "^4.0.0"
+  },
+  "devDependencies": {
+    "@tailor-cms/eslint-config": "0.0.2",
+    "@tailor-cms/tce-boot": "0.0.16",
+    "@types/node": "^20.5.7",
+    "prettier": "^2.7.1",
     "typescript": "^5.1.6",
-    "validate-npm-package-name": "^4.0.0",
     "vue-template-compiler": "2.7.14",
     "vue": "2.7.14"
   },
