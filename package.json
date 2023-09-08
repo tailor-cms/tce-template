@@ -7,13 +7,16 @@
   "exports": {
     "./edit": {
       "import": "./packages/edit/dist/index.js",
-      "require": "./packages/edit/dist/index.umd.cjs"
+      "require": "./packages/edit/dist/index.cjs"
     },
     "./display": {
       "import": "./packages/display/dist/index.js",
-      "require": "./packages/display/dist/index.umd.cjs"
+      "require": "./packages/display/dist/index.cjs"
     },
-    "./server": "./packages/server/dist/index.js"
+    "./server": {
+      "import": "./packages/server/dist/index.js",
+      "require": "./packages/server/dist/index.cjs"
+    }
   },
   "scripts": {
     "dev": "cd ./node_modules/@tailor-cms/tce-boot && pnpm start",
@@ -24,32 +27,18 @@
   "devDependencies": {
     "@npmcli/package-json": "^2.0.0",
     "@tailor-cms/eslint-config": "0.0.2",
-    "@tailor-cms/tce-boot": "0.0.14",
+    "@tailor-cms/tce-boot": "0.0.16",
     "@types/node": "^20.5.7",
-    "@typescript-eslint/eslint-plugin": ">=6.4.0",
-    "@typescript-eslint/parser": ">=6.4.0",
     "chalk": "^4.1.2",
     "degit": "^2.8.4",
     "enquirer": "^2.4.1",
-    "eslint": ">=8.13.0",
-    "eslint-config-prettier": ">=9.0.0",
-    "eslint-config-semistandard": ">=17.0.0",
-    "eslint-config-standard": ">=17.1.0",
-    "eslint-plugin-import": ">=2.28.1",
-    "eslint-plugin-n": ">=15.0.0",
-    "eslint-plugin-prettier": ">=4.2.1",
-    "eslint-plugin-promise": ">=6.1.1",
-    "eslint-plugin-vue": ">=9.17.0",
-    "eslint-plugin-vuejs-accessibility": ">=2.2.0",
     "has-flag": "^5.0.1",
     "prettier": "^2.7.1",
     "shelljs": "^0.8.5",
     "typescript": "^5.1.6",
     "validate-npm-package-name": "^4.0.0",
     "vue-template-compiler": "2.7.14",
-    "vue": "2.7.14",
-    "boxen": "^7.1.1",
-    "concurrently": "^8.2.0"
+    "vue": "2.7.14"
   },
   "pnpm": {
     "packageExtensions": {

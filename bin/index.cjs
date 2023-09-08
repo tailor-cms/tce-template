@@ -10,11 +10,11 @@ const {
   updatePackageJson,
   getPackageJson,
   getPackageName,
-  SUCCESS_CODE
+  SUCCESS_CODE,
 } = require("./utils.cjs");
 
 function validateEnvironment() {
-  ['git', 'node', 'pnpm'].forEach((prerequisite) => {
+  ["git", "node", "pnpm"].forEach((prerequisite) => {
     if (!shell.which(prerequisite)) {
       exitOnError(`This script requires ${prerequisite}`);
     }
@@ -24,10 +24,7 @@ function validateEnvironment() {
 async function cloneRepository() {
   shell.echo(formatSuccessLog("1/4 Cloning respository"));
   const name = await getPackageName();
-  const tmpDirName = `${name}-tmp`;
-  await degit('tailor-cms/t-xt', { mode: 'git' }).clone(tmpDirName);
-  shell.exec(`mv ./${tmpDirName}/packages/tce-template ${name}`);
-  shell.exec(`rm -rf ${tmpDirName}`)
+  await degit("tailor-cms/tce-template", { mode: "git" }).clone(name);
   await updatePackageJson({ name });
 }
 
@@ -45,7 +42,8 @@ async function runSetup() {
     const answer = await setupSnippet.run();
     shell.echo(answer.result);
     await updatePackageJson(JSON.parse(answer.result));
-    shell.exec("cp .env.example .env");
+    // TODO: env setup
+    // shell.exec("cp .env.example .env");
   } catch {
     exitOnError("Project setup failed");
   }

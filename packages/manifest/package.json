@@ -40,7 +40,7 @@
     ],
     "bundle": true,
     "minify": false,
-    "clean": true,
+    "clean": false,
     "dts": true
   }
 }

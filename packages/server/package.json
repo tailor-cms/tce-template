@@ -16,7 +16,7 @@
     "dist"
   ],
   "scripts": {
-    "dev": "tsup --watch",
+    "dev": "tsup --watch src --watch ../manifest/dist",
     "build": "tsup",
     "lint": "eslint --ext .js,.ts .",
     "lint:fix": "pnpm lint --fix"
@@ -41,7 +41,7 @@
     ],
     "bundle": true,
     "minify": false,
-    "clean": true,
+    "clean": false,
     "dts": true
   }
 }
