@@ -25,6 +25,6 @@ yarn-error.log*
 
 # Playwright
 playwright-report
-test/out/*
+test/out
 test/test-results/
 test/playwright/.cache/
