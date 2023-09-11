@@ -23,16 +23,7 @@ jobs:
       - name: Build packages
         run: pnpm build
       - name: Start runtime
-        run: pnpm dev & sleep 20
-      - name: Check if Display component runtime is ready
-        uses: fjogeleit/http-request-action@v1
-        with:
-          url: 'http://localhost:8020'
-          method: 'GET'
-          contentType: text/html
-          retry: 5
-          retryWait: 4000
-          timeout: 20000
+        run: pnpm dev & sleep 30
       - name: Check if Edit component runtime is ready
         uses: fjogeleit/http-request-action@v1
         with:
