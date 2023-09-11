@@ -22,3 +22,9 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+
+# Playwright
+playwright-report
+test/out
+test/test-results/
+test/playwright/.cache/

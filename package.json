@@ -22,7 +22,8 @@
     "dev": "cd ./node_modules/@tailor-cms/tce-boot && pnpm start",
     "build": "pnpm -r run build",
     "lint": "pnpm -r run lint",
-    "lint:fix": "pnpm -r run lint --fix"
+    "lint:fix": "pnpm -r run lint --fix",
+    "test": "pnpm playwright test --config ./test/playwright.config.ts"
   },
   "bin": {
     "@tailor-cms/tce-template": "bin/index.cjs"
@@ -37,6 +38,7 @@
     "validate-npm-package-name": "^4.0.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.37.1",
     "@tailor-cms/eslint-config": "0.0.2",
     "@tailor-cms/tce-boot": "0.0.16",
     "@types/node": "^20.5.7",
