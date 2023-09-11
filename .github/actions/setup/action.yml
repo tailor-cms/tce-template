@@ -14,3 +14,5 @@ runs:
   - name: Install dependencies
     shell: bash
     run: pnpm i
+  - name: Install Playwright browsers
+    run: pnpm exec playwright install --with-deps
