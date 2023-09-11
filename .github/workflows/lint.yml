@@ -22,7 +22,27 @@ jobs:
         uses: ./.github/actions/setup
       - name: Build packages
         run: pnpm build
-      - name: Run E2E tests
+      - name: Start runtime
+        run: pnpm dev
+      - name: Check if Display component runtime is ready
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: 'http://localhost:8020'
+          method: 'GET'
+          contentType: text/html
+          retry: 5
+          retryWait: 4000
+          timeout: 20000
+      - name: Check if Edit component runtime is ready
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: 'http://localhost:8010'
+          method: 'GET'
+          contentType: text/html
+          retry: 5
+          retryWait: 4000
+          timeout: 20000
+      - name: Run E2E suite
         run: pnpm test
       - uses: actions/upload-artifact@v3
         if: always()
