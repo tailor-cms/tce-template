@@ -23,7 +23,7 @@ jobs:
       - name: Build packages
         run: pnpm build
       - name: Start runtime
-        run: pnpm dev & sleep 30
+        run: pnpm dev & sleep 50
       - name: Run E2E suite
         run: pnpm test
       - uses: actions/upload-artifact@v3
