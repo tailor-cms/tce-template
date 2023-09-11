@@ -23,7 +23,7 @@ jobs:
       - name: Build packages
         run: pnpm build
       - name: Start runtime
-        run: pnpm dev
+        run: pnpm dev & sleep 20
       - name: Check if Display component runtime is ready
         uses: fjogeleit/http-request-action@v1
         with:
