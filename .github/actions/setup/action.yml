@@ -15,4 +15,5 @@ runs:
     shell: bash
     run: pnpm i
   - name: Install Playwright browsers
+    shell: bash
     run: pnpm exec playwright install --with-deps
