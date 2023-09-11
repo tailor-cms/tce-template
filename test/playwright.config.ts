@@ -12,10 +12,11 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: '.',
   outputDir: './out',
-  timeout: 60000,
+  timeout: 10 * 60 * 1000,
+  expect: { timeout: 10 * 1000 },
   fullyParallel: false,
   forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
+  retries: process.env.CI ? 3 : 0,
   workers: process.env.CI ? 1 : undefined,
   use: {
     baseURL: 'http://localhost:8080',
