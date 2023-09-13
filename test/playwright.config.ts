@@ -13,7 +13,7 @@ export default defineConfig({
   testDir: '.',
   outputDir: './out',
   timeout: 10 * 60 * 1000,
-  expect: { timeout: 10 * 1000 },
+  expect: { timeout: 20 * 1000 },
   fullyParallel: false,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 3 : 0,
@@ -25,9 +25,10 @@ export default defineConfig({
   },
   projects: [
     {
-      name: 'firefox',
+      name: 'chrome',
       use: {
-        ...devices['Desktop Firefox'],
+        ...devices['Desktop Chrome'],
+        channel: 'chrome',
       },
     },
   ]

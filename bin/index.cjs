@@ -35,6 +35,10 @@ function installDependencies() {
   if (installRootDepsCommand.code !== SUCCESS_CODE) {
     exitOnError("Installing dependencies via pnpm failed");
   }
+  const buildDepsCommand = shell.exec("pnpm build");
+  if (buildDepsCommand.code !== SUCCESS_CODE) {
+    exitOnError("Building dependencies via pnpm failed");
+  }
 }
 
 async function runSetup() {

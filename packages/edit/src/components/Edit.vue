@@ -1,6 +1,6 @@
 <template>
   <div class="tce-container">
-    <p>Edit version of the content element</p>
+    <span>This is Edit version of the content element</span>
   </div>
 </template>
 
@@ -9,7 +9,10 @@
 <style scoped>
 .tce-container {
   background-color: transparent;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 2px dashed #888;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 1rem;
 }
 </style>
