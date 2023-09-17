@@ -1,7 +1,7 @@
 {
   "name": "@tailor-cms/tce-template",
   "description": "Content element template",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "author": "ExtensionEngine <info@extensionengine.com>",
   "type": "module",
   "exports": {
