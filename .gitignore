@@ -28,3 +28,4 @@ playwright-report
 test/out
 test/test-results/
 test/playwright/.cache/
+test/.boot-state.json
