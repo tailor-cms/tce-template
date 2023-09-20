@@ -2,9 +2,11 @@ import { test, expect } from '@playwright/test';
 
 test.beforeEach(async ({ page }) => {
   await page.goto('/');
+  await page.waitForTimeout(17000);
 });
 
 test('Renders Display component', async ({ page }) => {
+  await page.reload();
   const displayFrame = page.frameLocator('#displayPanel')
   await expect(displayFrame.getByText('Display preview')).toBeVisible();
   const DISPLAY_COPY = 'This is the display version of the content element';
@@ -12,6 +14,7 @@ test('Renders Display component', async ({ page }) => {
 });
 
 test('Renders Edit component', async ({ page }) => {
+  await page.reload();
   const editFrame = page.frameLocator('#editPanel')
   await expect(editFrame.getByText('Edit preview')).toBeVisible();
   const EDIT_COPY = 'Edit version of the content element';
@@ -23,6 +26,7 @@ test('Renders Edit component', async ({ page }) => {
 });
 
 test('Renders server state panel', async ({ page }) => {
+  await page.reload();
   const properties = ['uid', 'type', 'meta', 'data', 'contentId'];
   const bottomPanel = page.locator('#panelBottom');
   for (const prop of properties) {
