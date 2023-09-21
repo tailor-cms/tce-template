@@ -1,7 +1,7 @@
-import { test, expect } from "@playwright/test";
+import { test } from '@playwright/test';
 
-test("Renders preview", async ({ page }) => {
-  await page.goto("/");
+test('Renders preview', async ({ page }) => {
+  await page.goto('/');
   // First time boot setup
   await page.waitForTimeout(20000);
   await page.reload();
