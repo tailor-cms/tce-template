@@ -1,10 +1,15 @@
 <template>
   <div class="tce-container">
-    <span>This is Edit version of the content element</span>
+    <span>This is Edit version of the content element {{ element?.id }}</span>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { Element } from 'tce-manifest';
+
+defineProps<{ element: Element; isFocused: boolean }>();
+defineEmits(['save']);
+</script>
 
 <style scoped>
 .tce-container {

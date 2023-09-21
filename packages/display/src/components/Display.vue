@@ -1,10 +1,14 @@
 <template>
   <div class="tce-root">
-    <p>This is the Display version of the content element</p>
+    <p>This is the Display version of the content element {{ id }}</p>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ElementData } from 'tce-manifest';
+
+defineProps<{ id: number; data: ElementData }>();
+</script>
 
 <style scoped>
 .tce-root {
