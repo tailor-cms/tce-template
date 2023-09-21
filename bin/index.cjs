@@ -68,7 +68,6 @@ async function displayInstructions() {
   shell.echo(chalk.green("Done!\n"));
   shell.echo("Your next steps are:");
   shell.echo(chalk.blue(`📂 cd ${packageName}`));
-  shell.echo(`🔨 Build packages with ${chalk.blue("pnpm build")}`);
   shell.echo(`🚀 Start development server with ${chalk.blue("pnpm dev")}`);
 }
 
