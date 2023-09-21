@@ -25,8 +25,18 @@ export function afterRetrieve(element: Element, services: any) {
   return element;
 }
 
+export const hookMap = new Map(
+  Object.entries({
+    beforeSave,
+    afterSave,
+    afterLoaded,
+    afterRetrieve,
+  }),
+);
+
 export default {
   type,
+  hookMap,
   initState,
   beforeSave,
   afterSave,
