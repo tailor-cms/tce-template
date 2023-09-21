@@ -13,7 +13,7 @@ export default defineConfig({
   testDir: '.',
   outputDir: './out',
   timeout: 10 * 60 * 1000,
-  expect: { timeout: 20 * 1000 },
+  expect: { timeout: 30 * 1000 },
   fullyParallel: false,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 3 : 0,
@@ -25,11 +25,18 @@ export default defineConfig({
   },
   projects: [
     {
+      name: 'setup',
+      testMatch: 'setup.ts',
+    },
+    {
       name: 'chrome',
+      testMatch: /.*\.spec\.ts/,
       use: {
         ...devices['Desktop Chrome'],
         channel: 'chrome',
+        storageState: './test/.boot-state.json',
       },
+      dependencies: ['setup'],
     },
   ]
 });
