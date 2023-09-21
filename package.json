@@ -47,15 +47,6 @@
     "vue-template-compiler": "2.7.14",
     "vue": "2.7.14"
   },
-  "pnpm": {
-    "packageExtensions": {
-      "vue-template-compiler": {
-        "peerDependencies": {
-          "vue": "2.7.14"
-        }
-      }
-    }
-  },
   "publishConfig": {
     "access": "public"
   }
