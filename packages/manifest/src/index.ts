@@ -30,6 +30,7 @@ const manifest: ElementManifest = {
   type,
   version: '1.0',
   name,
+  ssr: false,
   initState,
   ui,
 };
