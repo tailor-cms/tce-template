@@ -25,6 +25,7 @@ export interface ElementManifest {
   type: string;
   version: string;
   name: string;
+  ssr: boolean;
   initState: DataInitializer;
   Edit?: object;
   TopToolbar?: object;
