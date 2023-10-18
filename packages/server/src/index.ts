@@ -1,26 +1,29 @@
 import { initState, type } from 'tce-manifest';
 import type { Element } from 'tce-manifest';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export function beforeSave(element: Element, services: any) {
+type Runtime = 'authoring' | 'delivery';
+
+/* eslint-disable @typescript-eslint/no-unused-vars */
+export function beforeSave(element: Element, services: any, runtime: Runtime) {
   console.log('Before save hook');
   return element;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export function afterSave(element: Element, services: any) {
+export function afterSave(element: Element, services: any, runtime: Runtime) {
   console.log('After save hook');
   return element;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export function afterLoaded(element: Element, services: any) {
+export function afterLoaded(element: Element, services: any, runtime: Runtime) {
   console.log('After loaded hook');
   return element;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export function afterRetrieve(element: Element, services: any) {
+export function afterRetrieve(
+  element: Element,
+  services: any,
+  runtime: Runtime,
+) {
   console.log('After retrieve hook');
   return element;
 }
