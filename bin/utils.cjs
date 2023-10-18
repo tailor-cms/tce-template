@@ -50,9 +50,9 @@ async function getPackageJson() {
   }
 }
 
-async function updatePackageJson(data) {
+async function updatePackageJson(data, path = "./") {
   try {
-    const pkgJson = await PackageJson.load("./");
+    const pkgJson = await PackageJson.load(path);
     pkgJson.update(data);
     await pkgJson.save();
   } catch (err) {

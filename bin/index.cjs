@@ -46,7 +46,13 @@ async function runSetup() {
   try {
     const answer = await setupSnippet.run();
     shell.echo(answer.result);
-    await updatePackageJson(JSON.parse(answer.result));
+    const packageInfo = JSON.parse(answer.result);
+    await updatePackageJson(packageInfo);
+    const subpackages = ['edit', 'display', 'server', 'manifest'];
+    for (const packageName of subpackages) {
+      await updatePackageJson(packageInfo, `./packages/${packageName}`)
+    }
+
     // TODO: env setup
     // shell.exec("cp .env.example .env");
   } catch {
