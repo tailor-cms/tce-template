@@ -10,4 +10,9 @@
   The goal is to be able to specify if UI is SSR compatible.
 - Misc minor improvements
 
+#### Migration instructions
+- Bump tce-boot to `0.1.0`
+- Optionally update element manifest interface to include ssr property
+- Optionally type server hooks
+
 ---
