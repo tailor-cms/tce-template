@@ -5,7 +5,7 @@ import type {
 } from './interfaces';
 
 // Element unique id within the target system (e.g. Tailor)
-export const type = 'ORG/CUSTOM_ELEMENT';
+export const type = 'ORG_CUSTOM_ELEMENT';
 
 // Display name (e.g. shown to the author)
 export const name = 'Custom element';
