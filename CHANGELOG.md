@@ -15,6 +15,7 @@
 #### Migration instructions
 - Bump tce-boot to `0.1.0`
 - [Optionally update element manifest interface to include ssr property](https://github.com/tailor-cms/tce-template/blob/main/packages/manifest/src/interfaces.ts#L28)
-- [Optionally type server hooks and add new param](https://github.com/tailor-cms/tce-template/blob/main/packages/server/src/index.ts#L6)
+- [Optionally type server hooks and add new param](https://github.com/tailor-cms/tce-template/blob/main/packages/server/src/index.ts#L6).
+  In order to do so, you will need to install `@tailor-cms/cek-common` package.
 
 ---
