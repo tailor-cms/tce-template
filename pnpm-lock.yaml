@@ -35,8 +35,8 @@ importers:
         specifier: 0.0.2
         version: 0.0.2(@typescript-eslint/eslint-plugin@6.7.2)(@typescript-eslint/parser@6.7.2)(eslint-config-prettier@9.0.0)(eslint-config-semistandard@17.0.0)(eslint-config-standard@17.1.0)(eslint-plugin-import@2.28.1)(eslint-plugin-n@16.1.0)(eslint-plugin-prettier@5.0.0)(eslint-plugin-promise@6.1.1)(eslint-plugin-vue@9.17.0)(eslint-plugin-vuejs-accessibility@2.2.0)(eslint@8.49.0)
       '@tailor-cms/tce-boot':
-        specifier: 0.1.1
-        version: 0.1.1(@types/node@20.5.7)
+        specifier: 0.2.0-beta.7
+        version: 0.2.0-beta.7(@types/node@20.5.7)
       '@types/node':
         specifier: ^20.5.7
         version: 20.5.7
@@ -586,10 +586,6 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@tailor-cms/cek-common@0.0.1:
-    resolution: {integrity: sha512-Mi+V01JypQPJqdDKl0QrQYfEV92SNl+KIgtV/9VhGE8tYBItb4Fdhq6hXW2/3qwB7163raNLG6oZAUaDBVAQ2A==}
-    dev: true
-
   /@tailor-cms/cek-common@0.0.3:
     resolution: {integrity: sha512-QZGKfGb8sdmS/4U2ZdbG8VKD816Q2AoL4t23/WGXyo5wgpdjw4n9eNYNTwv8kp/pE02LzSBG+CUOMTb3UAqPoA==}
     dev: true
@@ -624,13 +620,13 @@ packages:
       eslint-plugin-vuejs-accessibility: 2.2.0(eslint@8.49.0)
     dev: true
 
-  /@tailor-cms/tce-boot@0.1.1(@types/node@20.5.7):
-    resolution: {integrity: sha512-CZYcslHGrlWvsx20uE9tWCnyeZH+mRGZ95283SaAXJFbfdLzIdj2ch1myAE2Egwtn52TcXaSS95Sj1RRV87UlQ==}
+  /@tailor-cms/tce-boot@0.2.0-beta.7(@types/node@20.5.7):
+    resolution: {integrity: sha512-2Y7DuUDUzFe/qmhUgsftrTA7ZlvEYB/PvqAMTKSUrz/bfqhOpgYAhxqq9IC56leWpMhdiUYY1Z/Mu9hbklsFCQ==}
     dependencies:
-      '@tailor-cms/tce-display-runtime': 0.1.0(@types/node@20.5.7)
-      '@tailor-cms/tce-edit-runtime': 0.1.0(@types/node@20.5.7)
-      '@tailor-cms/tce-preview-runtime': 0.1.0(@types/node@20.5.7)
-      '@tailor-cms/tce-server-runtime': 0.1.0(@types/node@20.5.7)
+      '@tailor-cms/tce-display-runtime': 0.2.0-beta.7(@types/node@20.5.7)
+      '@tailor-cms/tce-edit-runtime': 0.2.0-beta.7(@types/node@20.5.7)
+      '@tailor-cms/tce-preview-runtime': 0.2.0-beta.7(@types/node@20.5.7)
+      '@tailor-cms/tce-server-runtime': 0.2.0-beta.7(@types/node@20.5.7)
       boxen: 7.1.1
       concurrently: 8.2.1
       fkill: 8.1.1
@@ -666,8 +662,8 @@ packages:
       - webpack-plugin-vuetify
     dev: true
 
-  /@tailor-cms/tce-display-runtime@0.1.0(@types/node@20.5.7):
-    resolution: {integrity: sha512-mTtViqvzmVVwx5RATY1MVb+xpodp57R9EtBhSC5pyqRDD8GKV6CxPLCJVyQzaKlAG+bfUSYKrWYFvaWCO9lpPw==}
+  /@tailor-cms/tce-display-runtime@0.2.0-beta.7(@types/node@20.5.7):
+    resolution: {integrity: sha512-ws4T1MeTOeEhXnqGwroqUWTnbLB9Sdgp6tsYipZ9ipfDNzfGGoCuwzZL46o3gL8LegtybmVSlEv7nJvPL7r4aQ==}
     dependencies:
       '@mdi/font': 7.2.96
       '@vitejs/plugin-vue': 4.3.4(vite@4.4.9)(vue@3.3.4)
@@ -701,12 +697,12 @@ packages:
       - webpack-plugin-vuetify
     dev: true
 
-  /@tailor-cms/tce-edit-runtime@0.1.0(@types/node@20.5.7):
-    resolution: {integrity: sha512-+ZIin9EaPUCtoWzS36/hHiuACrWrULX+ZjdX98cMJT/BmV7FBIKBXeEdmWbeRWMBO2xfi4k9XLUYTlWKDn3oeA==}
+  /@tailor-cms/tce-edit-runtime@0.2.0-beta.7(@types/node@20.5.7):
+    resolution: {integrity: sha512-kyLfXeB3jAY0N/6rulJPQ1nkZJhLFVWVtIrbNMK74NMAK7jzvx9GFeMFmgjbOH7HqMOfDWV/sfkBPBSKaSr9FA==}
     dependencies:
       '@extensionengine/vue-radio': 1.0.0-beta.5
       '@mdi/font': 7.2.96
-      '@tailor-cms/cek-common': 0.0.1
+      '@tailor-cms/cek-common': 0.0.3
       '@vitejs/plugin-vue2': 2.2.0(vite@4.4.9)(vue@2.7.14)
       axios: 1.5.1
       ky: 1.0.1
@@ -733,8 +729,8 @@ packages:
       - terser
     dev: true
 
-  /@tailor-cms/tce-preview-runtime@0.1.0(@types/node@20.5.7):
-    resolution: {integrity: sha512-TPxs3GKzyZwsKhWYwjcvZq4X/zryaWGRcUExt/W7z3qYMjWD5P8eOOjY6ofyhnL7ePrdHxmeabK7Q/AgMoeG6w==}
+  /@tailor-cms/tce-preview-runtime@0.2.0-beta.7(@types/node@20.5.7):
+    resolution: {integrity: sha512-K4lRSE+WLCtdtPtI4ZGVJZKtRs8umdcEHxeGZnGE1LtN9N76wZBOop/FnDppCkR9A5ObZsetS1dkK3DXjeA7Cg==}
     dependencies:
       '@mdi/font': 7.2.96
       '@vitejs/plugin-vue': 4.3.4(vite@4.4.9)(vue@3.3.4)
@@ -762,8 +758,8 @@ packages:
       - webpack-plugin-vuetify
     dev: true
 
-  /@tailor-cms/tce-server-runtime@0.1.0(@types/node@20.5.7):
-    resolution: {integrity: sha512-oStQNDUQFxDlCSSJuXR5EAeiyhmQOO5tqFUxNFdSDVmeJkkBACJDM/Ctue1dI35Wgof/HE6tFmjJT5jpaWsyAA==}
+  /@tailor-cms/tce-server-runtime@0.2.0-beta.7(@types/node@20.5.7):
+    resolution: {integrity: sha512-6/AbTYeWoSoYK29RSKeJ6DFLAyZHZRRtJFFWosQyH3rUPg49w72TBe8vQJVHNj9dTOzTE1/5ApOPVFJYiuQW0A==}
     dependencies:
       bluebird: 3.7.2
       cors: 2.8.5
