@@ -26,6 +26,10 @@ const ui = {
   forceFullWidth: true,
 };
 
+export const mocks = {
+  displayContexts: [{ name: 'Test', data: { exampleValue: 'test' } }],
+};
+
 const manifest: ElementManifest = {
   type,
   version: '1.0',
@@ -33,6 +37,7 @@ const manifest: ElementManifest = {
   ssr: false,
   initState,
   ui,
+  mocks,
 };
 
 export default manifest;

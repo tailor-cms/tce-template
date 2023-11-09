@@ -35,4 +35,7 @@ export interface ElementManifest {
     icon: string;
     forceFullWidth: boolean;
   };
+  mocks?: {
+    displayContexts: Array<{ name: string; data: any }>;
+  };
 }
