@@ -1,5 +1,21 @@
 # Changelog
 
+### v0.2.0 2023-11-09
+
+#### Changes
+- [Enabled user-state hooks](https://tailor-cms.github.io/xt/server-package.html#user-state-hooks)
+
+#### Migration instructions
+- Bump tce-boot to `0.2.0`
+- [Add the display context to the manifest interface](https://github.com/tailor-cms/tce-template/pull/16/files#diff-363caee1e8047788dee5a0a3feca5d40a88c160dd36abadb550e8577ae0d3244R38)
+- [Add the example display context to the manifest](https://github.com/tailor-cms/tce-template/pull/16/files#diff-c248ce0c077134efe1982e29743139541a2d28d6ace0e3f6e5a50cf09f1beaafR29)
+- [Add beforeDisplay and onUserInteraction hooks](https://github.com/tailor-cms/tce-template/pull/16/files#diff-8e6dfbbfb522575fe7c568c2de518bf9de351de83c9dbb48eaa865cd54450eb3R40)
+- [Define userState prop on the Display component](https://github.com/tailor-cms/tce-template/pull/16/files#diff-cfb5d05096f2f57087b355fa04ea9ac63033d96b4f1100db0991c69baa4aebc7R12)
+
+-[For more details see 0.2.0 PR](https://github.com/tailor-cms/tce-template/pull/16/files)
+
+---
+
 ### v0.1.0 2023-10-18
 
 #### Changes
