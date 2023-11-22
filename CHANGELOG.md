@@ -3,7 +3,7 @@
 ### v0.2.1 2023-11-22
 
 #### Changes
-- Enabled passing data context from `onUserInteraction` hook to the
+- Enabled passing data context from the `onUserInteraction` hook to the
   `beforeDisplay` hook (via the `transientState` prop). For more details see the
   [docs](https://tailor-cms.github.io/xt/server-package.html#onuserinteraction-hook).
 

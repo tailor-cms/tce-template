@@ -35,8 +35,8 @@ importers:
         specifier: 0.0.2
         version: 0.0.2(@typescript-eslint/eslint-plugin@6.7.2)(@typescript-eslint/parser@6.7.2)(eslint-config-prettier@9.0.0)(eslint-config-semistandard@17.0.0)(eslint-config-standard@17.1.0)(eslint-plugin-import@2.28.1)(eslint-plugin-n@16.1.0)(eslint-plugin-prettier@5.0.0)(eslint-plugin-promise@6.1.1)(eslint-plugin-vue@9.17.0)(eslint-plugin-vuejs-accessibility@2.2.0)(eslint@8.49.0)
       '@tailor-cms/tce-boot':
-        specifier: 0.2.0
-        version: 0.2.0(@types/node@20.5.7)
+        specifier: 0.2.1
+        version: 0.2.1(@types/node@20.5.7)
       '@types/node':
         specifier: ^20.5.7
         version: 20.5.7
@@ -620,13 +620,13 @@ packages:
       eslint-plugin-vuejs-accessibility: 2.2.0(eslint@8.49.0)
     dev: true
 
-  /@tailor-cms/tce-boot@0.2.0(@types/node@20.5.7):
-    resolution: {integrity: sha512-CkElLiqt+uOifQqSavYWLAHioD9wV44cju9JLK/koF/vMhdNUsTtZtiMiy+M9Qt9PqGY4e+Es263BMk3IG9z6Q==}
+  /@tailor-cms/tce-boot@0.2.1(@types/node@20.5.7):
+    resolution: {integrity: sha512-OlLO+OehyVtpiy3rnRjZQOQlI3Bdi+LS3ZNR4ziIxiKR/pvdXn5SL+KgrrHOijxxCEtUJ99WdsGSw9VCojP5Qg==}
     dependencies:
       '@tailor-cms/tce-display-runtime': 0.2.0(@types/node@20.5.7)
       '@tailor-cms/tce-edit-runtime': 0.2.0(@types/node@20.5.7)
       '@tailor-cms/tce-preview-runtime': 0.2.0(@types/node@20.5.7)
-      '@tailor-cms/tce-server-runtime': 0.2.0(@types/node@20.5.7)
+      '@tailor-cms/tce-server-runtime': 0.2.1(@types/node@20.5.7)
       boxen: 7.1.1
       concurrently: 8.2.1
       fkill: 8.1.1
@@ -758,8 +758,8 @@ packages:
       - webpack-plugin-vuetify
     dev: true
 
-  /@tailor-cms/tce-server-runtime@0.2.0(@types/node@20.5.7):
-    resolution: {integrity: sha512-wh9p3qHF/RfaqKuNqPDCE5L80dkreZscqNYwYcDa7967hq65o0gPYLAndG6mi1by17g5ZXU91tyx3No+H444Dw==}
+  /@tailor-cms/tce-server-runtime@0.2.1(@types/node@20.5.7):
+    resolution: {integrity: sha512-7sm68Lj3sPbZdZygpkhiIgQSNfm+p+7Ra1KSKLCxmJ1rMZDhDOhux3BOkH1A/s0EDbQofLb4/WNLmhPBnlNJIg==}
     dependencies:
       bluebird: 3.7.2
       cors: 2.8.5
