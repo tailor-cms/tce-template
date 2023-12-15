@@ -60,6 +60,16 @@ async function updatePackageJson(data, path = "./") {
   }
 }
 
+async function resolveTemplateBranch() {
+  const prompt = new Select({
+    name: 'template',
+    message: 'Select a template',
+    choices: ['default', 'hlxp (requires credentials)']
+  });
+  const input = await prompt.run();
+  return input.template === 'default' ? 'main' : 'hlxp'
+}
+
 async function getPackageName() {
   const name = await prompt(chalk.cyan("Enter project name: "));
   if (!validatePackageName(name).validForNewPackages) {
@@ -74,6 +84,7 @@ module.exports = {
   setupSnippet,
   formatSuccessLog,
   formatErrorLog,
+  resolveTemplateBranch,
   exitOnError,
   updatePackageJson,
   getPackageJson,

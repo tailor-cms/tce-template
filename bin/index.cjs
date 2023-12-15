@@ -24,7 +24,8 @@ function validateEnvironment() {
 async function cloneRepository() {
   shell.echo(formatSuccessLog("1/4 Cloning respository"));
   const name = await getPackageName();
-  await degit("tailor-cms/tce-template", { mode: "git" }).clone(name);
+  const branch = await resolveTemplateBranch();
+  await degit(`tailor-cms/tce-template#${branch}`, { mode: "git" }).clone(name);
   shell.cd(`./${name}`);
   await updatePackageJson({ name });
 }
@@ -52,9 +53,6 @@ async function runSetup() {
     for (const packageName of subpackages) {
       await updatePackageJson(packageInfo, `./packages/${packageName}`)
     }
-
-    // TODO: env setup
-    // shell.exec("cp .env.example .env");
   } catch {
     exitOnError("Project setup failed");
   }
@@ -79,6 +77,7 @@ async function displayInstructions() {
 
 const SCRIPT_STEPS = [
   validateEnvironment,
+  resolveTemplateBranch,
   cloneRepository,
   installDependencies,
   runSetup,
