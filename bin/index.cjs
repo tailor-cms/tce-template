@@ -10,6 +10,7 @@ const {
   updatePackageJson,
   getPackageJson,
   getPackageName,
+  resolveTemplateBranch,
   SUCCESS_CODE,
 } = require("./utils.cjs");
 
@@ -77,7 +78,6 @@ async function displayInstructions() {
 
 const SCRIPT_STEPS = [
   validateEnvironment,
-  resolveTemplateBranch,
   cloneRepository,
   installDependencies,
   runSetup,

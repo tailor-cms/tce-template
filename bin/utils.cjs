@@ -3,7 +3,7 @@ const readline = require("node:readline");
 const chalk = require("chalk");
 const PackageJson = require("@npmcli/package-json");
 const shell = require("shelljs");
-const { Snippet } = require("enquirer");
+const { Select, Snippet } = require("enquirer");
 const validatePackageName = require("validate-npm-package-name");
 
 const SUCCESS_CODE = 0;
