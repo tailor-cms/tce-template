@@ -1,7 +1,10 @@
 <template>
   <div class="tce-root">
     <p>This is the Display version of the content element {{ id }}</p>
-    <v-btn class="my-6" @click="submit">Update user state</v-btn>
+    <v-btn class="my-6" color="primary" @click="submit">
+      Update user state
+      <v-icon>fa fa-user</v-icon>
+    </v-btn>
     <div>User state: {{ userState }}</div>
   </div>
 </template>

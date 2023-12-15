@@ -32,6 +32,9 @@ importers:
         specifier: ^4.0.0
         version: 4.0.0
     devDependencies:
+      '@harvard-lxp/tek-cda-runtime':
+        specifier: 0.0.2
+        version: 0.0.2(@types/node@20.5.7)(roboto-fontface@0.10.0)
       '@playwright/test':
         specifier: ^1.37.1
         version: 1.37.1
@@ -435,6 +438,104 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@harvard-lxp/font-awesome@0.0.1:
+    resolution: {integrity: sha512-QmZUgcnTipIGYiTGME5p2r8cg/k1YqMfyX5g77sjx2wgcVED0TbI7c8TYJ+kaJIb3AS5+VZrubhpCt+UTG1jyg==, tarball: https://npm.pkg.github.com/download/@harvard-lxp/font-awesome/0.0.1/2a961846eb671961458e419c778e12b908c4af15}
+    dev: true
+
+  /@harvard-lxp/lxp-ui@0.0.6(@harvard-lxp/font-awesome@0.0.1)(@types/node@20.5.7)(lodash@4.17.21)(roboto-fontface@0.10.0)(sass@1.68.0)(vue@3.3.4)(vuetify@3.3.17):
+    resolution: {integrity: sha512-f8HrFh2z59pmsRlWqWeaYo1nBww8M9FNu5NOBIjuAmiewpldiMZP4BQjFSvnq0kyNr9ZG60PWE825kFcNnPe4A==, tarball: https://npm.pkg.github.com/download/@harvard-lxp/lxp-ui/0.0.6/f8404b8826422ec05d4c0abf46b97bca721ed79c}
+    peerDependencies:
+      '@harvard-lxp/font-awesome': ^0.0.1
+      lodash: ^4.17.21
+      roboto-fontface: '*'
+      vue: ^3.3.4
+      vuetify: ^3.3.5
+    dependencies:
+      '@harvard-lxp/font-awesome': 0.0.1
+      '@vitejs/plugin-vue': 4.3.1(vite@4.4.9)(vue@3.3.4)
+      '@vueuse/core': 10.3.0(vue@3.3.4)
+      '@vueuse/integrations': 10.3.0(focus-trap@7.5.2)(vue@3.3.4)
+      cuid: 2.1.8
+      focus-trap: 7.5.2
+      lodash: 4.17.21
+      roboto-fontface: 0.10.0
+      vite: 4.4.9(@types/node@20.5.7)(sass@1.68.0)
+      vite-plugin-vuetify: 1.0.2(vite@4.4.9)(vue@3.3.4)(vuetify@3.3.17)
+      vue: 3.3.4
+      vuetify: 3.3.17(typescript@5.2.2)(vite-plugin-vuetify@1.0.2)(vue@3.3.4)
+      webfontloader: 1.6.28
+    transitivePeerDependencies:
+      - '@types/node'
+      - '@vue/composition-api'
+      - async-validator
+      - axios
+      - change-case
+      - drauu
+      - fuse.js
+      - idb-keyval
+      - jwt-decode
+      - less
+      - lightningcss
+      - nprogress
+      - qrcode
+      - sass
+      - sortablejs
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+      - universal-cookie
+    dev: true
+
+  /@harvard-lxp/tek-cda-runtime@0.0.2(@types/node@20.5.7)(roboto-fontface@0.10.0):
+    resolution: {integrity: sha512-CM8GPWak1U0sU/yrHRtnXCXX+xh9Ebf8LgouCyOOhpxne0woGKd/9WUafcK4mTDJPOFHIycDe13xTI7GBCdl+A==, tarball: https://npm.pkg.github.com/download/@harvard-lxp/tek-cda-runtime/0.0.2/eec7d14f343ac7f21bc1b661b1d0b9b73caf1308}
+    dependencies:
+      '@harvard-lxp/font-awesome': 0.0.1
+      '@harvard-lxp/lxp-ui': 0.0.6(@harvard-lxp/font-awesome@0.0.1)(@types/node@20.5.7)(lodash@4.17.21)(roboto-fontface@0.10.0)(sass@1.68.0)(vue@3.3.4)(vuetify@3.3.17)
+      '@vitejs/plugin-vue': 4.3.4(vite@4.4.9)(vue@3.3.4)
+      '@vue/reactivity': 3.3.4
+      '@vue/runtime-core': 3.3.4
+      '@vue/runtime-dom': 3.3.4
+      '@vue/shared': 3.3.4
+      ky: 1.0.1
+      lodash: 4.17.21
+      sass: 1.68.0
+      typescript: 5.2.2
+      unplugin-vue-components: 0.25.2(vue@3.3.4)
+      vite: 4.4.9(@types/node@20.5.7)(sass@1.68.0)
+      vite-plugin-vuetify: 1.0.2(vite@4.4.9)(vue@3.3.4)(vuetify@3.3.17)
+      vue: 3.3.4
+      vue-tsc: 1.8.13(typescript@5.2.2)(vue@3.3.4)
+      vuetify: 3.3.17(typescript@5.2.2)(vite-plugin-vuetify@1.0.2)(vue@3.3.4)
+      webfontloader: 1.6.28
+    transitivePeerDependencies:
+      - '@babel/parser'
+      - '@nuxt/kit'
+      - '@types/node'
+      - '@vue/composition-api'
+      - async-validator
+      - axios
+      - change-case
+      - drauu
+      - fuse.js
+      - idb-keyval
+      - jwt-decode
+      - less
+      - lightningcss
+      - nprogress
+      - qrcode
+      - roboto-fontface
+      - rollup
+      - sortablejs
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+      - universal-cookie
+      - vue-i18n
+      - webpack-plugin-vuetify
+    dev: true
 
   /@humanwhocodes/config-array@0.11.11:
     resolution: {integrity: sha512-N2brEuAadi0CcdeMXUkhbZB84eskAc8MEX1By6qEchoVywSgXPIjou4rYsl0V3Hj0ZnuGycGCjdNgockbzeWNA==}
@@ -1033,6 +1134,17 @@ packages:
       vue: 3.3.4
     dev: true
 
+  /@vitejs/plugin-vue@4.3.1(vite@4.4.9)(vue@3.3.4):
+    resolution: {integrity: sha512-tUBEtWcF7wFtII7ayNiLNDTCE1X1afySEo+XNVMNkFXaThENyCowIEX095QqbJZGTgoOcSVDJGlnde2NG4jtbQ==}
+    engines: {node: ^14.18.0 || >=16.0.0}
+    peerDependencies:
+      vite: ^4.0.0
+      vue: ^3.2.25
+    dependencies:
+      vite: 4.4.9(@types/node@20.5.7)(sass@1.68.0)
+      vue: 3.3.4
+    dev: true
+
   /@vitejs/plugin-vue@4.3.4(vite@4.4.9)(vue@3.3.4):
     resolution: {integrity: sha512-ciXNIHKPriERBisHFBvnTbfKa6r9SAesOYXeGDzgegcvy9Q4xdScSHAmKbNT0M3O0S9LKhIf5/G+UYG4NnnzYw==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -1296,6 +1408,18 @@ packages:
       vuetify: 3.3.17(typescript@5.2.2)(vite-plugin-vuetify@1.0.2)(vue@3.3.4)
     dev: true
 
+  /@vueuse/core@10.3.0(vue@3.3.4):
+    resolution: {integrity: sha512-BEM5yxcFKb5btFjTSAFjTu5jmwoW66fyV9uJIP4wUXXU8aR5Hl44gndaaXp7dC5HSObmgbnR2RN+Un1p68Mf5Q==}
+    dependencies:
+      '@types/web-bluetooth': 0.0.17
+      '@vueuse/metadata': 10.3.0
+      '@vueuse/shared': 10.3.0(vue@3.3.4)
+      vue-demi: 0.14.6(vue@3.3.4)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: true
+
   /@vueuse/core@10.4.1(vue@3.3.4):
     resolution: {integrity: sha512-DkHIfMIoSIBjMgRRvdIvxsyboRZQmImofLyOHADqiVbQVilP8VVHDhBX2ZqoItOgu7dWa8oXiNnScOdPLhdEXg==}
     dependencies:
@@ -1308,8 +1432,71 @@ packages:
       - vue
     dev: true
 
+  /@vueuse/integrations@10.3.0(focus-trap@7.5.2)(vue@3.3.4):
+    resolution: {integrity: sha512-Jgiv7oFyIgC6BxmDtiyG/fxyGysIds00YaY7sefwbhCZ2/tjEx1W/1WcsISSJPNI30in28+HC2J4uuU8184ekg==}
+    peerDependencies:
+      async-validator: '*'
+      axios: '*'
+      change-case: '*'
+      drauu: '*'
+      focus-trap: '*'
+      fuse.js: '*'
+      idb-keyval: '*'
+      jwt-decode: '*'
+      nprogress: '*'
+      qrcode: '*'
+      sortablejs: '*'
+      universal-cookie: '*'
+    peerDependenciesMeta:
+      async-validator:
+        optional: true
+      axios:
+        optional: true
+      change-case:
+        optional: true
+      drauu:
+        optional: true
+      focus-trap:
+        optional: true
+      fuse.js:
+        optional: true
+      idb-keyval:
+        optional: true
+      jwt-decode:
+        optional: true
+      nprogress:
+        optional: true
+      qrcode:
+        optional: true
+      sortablejs:
+        optional: true
+      universal-cookie:
+        optional: true
+    dependencies:
+      '@vueuse/core': 10.3.0(vue@3.3.4)
+      '@vueuse/shared': 10.3.0(vue@3.3.4)
+      focus-trap: 7.5.2
+      vue-demi: 0.14.6(vue@3.3.4)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: true
+
+  /@vueuse/metadata@10.3.0:
+    resolution: {integrity: sha512-Ema3YhNOa4swDsV0V7CEY5JXvK19JI/o1szFO1iWxdFg3vhdFtCtSTP26PCvbUpnUtNHBY2wx5y3WDXND5Pvnw==}
+    dev: true
+
   /@vueuse/metadata@10.4.1:
     resolution: {integrity: sha512-2Sc8X+iVzeuMGHr6O2j4gv/zxvQGGOYETYXEc41h0iZXIRnRbJZGmY/QP8dvzqUelf8vg0p/yEA5VpCEu+WpZg==}
+    dev: true
+
+  /@vueuse/shared@10.3.0(vue@3.3.4):
+    resolution: {integrity: sha512-kGqCTEuFPMK4+fNWy6dUOiYmxGcUbtznMwBZLC1PubidF4VZY05B+Oht7Jh7/6x4VOWGpvu3R37WHi81cKpiqg==}
+    dependencies:
+      vue-demi: 0.14.6(vue@3.3.4)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
     dev: true
 
   /@vueuse/shared@10.4.1(vue@3.3.4):
@@ -1921,6 +2108,11 @@ packages:
 
   /csstype@3.1.2:
     resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
+
+  /cuid@2.1.8:
+    resolution: {integrity: sha512-xiEMER6E7TlTPnDxrM4eRiC6TRgjNX9xzEZ5U/Se2YJKr7Mq4pJn/2XEHjl3STcSh96GmkHPcBXLES8M29wyyg==}
+    deprecated: Cuid and other k-sortable and non-cryptographic ids (Ulid, ObjectId, KSUID, all UUIDs) are all insecure. Use @paralleldrive/cuid2 instead.
+    dev: true
 
   /date-fns@2.30.0:
     resolution: {integrity: sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw==}
@@ -2739,6 +2931,12 @@ packages:
 
   /flatted@3.2.9:
     resolution: {integrity: sha512-36yxDn5H7OFZQla0/jFJmbIKTdZAQHngCedGxiMmpNfEZM0sdEeT+WczLQrjK6D7o2aiyLYDnkw0R3JK0Qv1RQ==}
+    dev: true
+
+  /focus-trap@7.5.2:
+    resolution: {integrity: sha512-p6vGNNWLDGwJCiEjkSK6oERj/hEyI9ITsSwIUICBoKLlWiTWXJRfQibCwcoi50rTZdbi87qDtUlMCmQwsGSgPw==}
+    dependencies:
+      tabbable: 6.2.0
     dev: true
 
   /follow-redirects@1.15.3:
@@ -4322,6 +4520,10 @@ packages:
       glob: 7.2.3
     dev: true
 
+  /roboto-fontface@0.10.0:
+    resolution: {integrity: sha512-OlwfYEgA2RdboZohpldlvJ1xngOins5d7ejqnIBWr9KaMxsnBqotpptRXTyfNRLnFpqzX6sTDt+X+a+6udnU8g==}
+    dev: true
+
   /rollup@3.29.2:
     resolution: {integrity: sha512-CJouHoZ27v6siztc21eEQGo0kIcE5D1gVPA571ez0mMYb25LGYGKnVNXpEj5MGlepmDWGXNjDB5q7uNiPHC11A==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
@@ -4798,6 +5000,10 @@ packages:
     dependencies:
       '@pkgr/utils': 2.4.2
       tslib: 2.6.2
+    dev: true
+
+  /tabbable@6.2.0:
+    resolution: {integrity: sha512-Cat63mxsVJlzYvN51JmVXIgNoUokrIaT2zLclCXjRd8boZ0004U4KCs/sToJ75C6sdlByWxpYnb5Boif1VSFew==}
     dev: true
 
   /tar@6.2.0:
