@@ -75,7 +75,9 @@ async function resolveTemplateBranch() {
     choices: ["default", "hlxp (requires credentials)"],
   });
   const input = await prompt.run();
-  return input.template === "default" ? "main" : "hlxp";
+  return input.template === "default"
+    ? "chore/extract-display-runtime-from-boot"
+    : "hlxp";
 }
 
 async function getPackageName() {
