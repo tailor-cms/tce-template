@@ -1,9 +1,10 @@
+const fs = require("node:fs/promises");
 const readline = require("node:readline");
 
+const { Password, Select, Snippet } = require("enquirer");
 const chalk = require("chalk");
 const PackageJson = require("@npmcli/package-json");
 const shell = require("shelljs");
-const { Select, Snippet } = require("enquirer");
 const validatePackageName = require("validate-npm-package-name");
 
 const SUCCESS_CODE = 0;
@@ -33,8 +34,7 @@ const setupSnippet = new Snippet({
   name: "package.json",
   message: "Fill out the fields in package.json",
   required: true,
-  template:
-  `{
+  template: `{
     "description": "\${description}",
     "version": "\${version:0.0.1}",
     "author": "\${author_name} <\${author_email}> (https://github.com/\${username})"
@@ -50,6 +50,14 @@ async function getPackageJson() {
   }
 }
 
+async function setGithubAccessToken() {
+  const prompt = new Password({ message: "GitHub PAT token" });
+  const token = await prompt.run();
+  const registry = "@harvard-lxp:registry=https://npm.pkg.github.com/";
+  const creds = `//npm.pkg.github.com/:_authToken=${token}`;
+  return fs.writeFile("./.npmrc", `${registry}\n${creds}`);
+}
+
 async function updatePackageJson(data, path = "./") {
   try {
     const pkgJson = await PackageJson.load(path);
@@ -62,18 +70,22 @@ async function updatePackageJson(data, path = "./") {
 
 async function resolveTemplateBranch() {
   const prompt = new Select({
-    name: 'template',
-    message: 'Select a template',
-    choices: ['default', 'hlxp (requires credentials)']
+    name: "template",
+    message: "Select a template",
+    choices: ["default", "hlxp (requires credentials)"],
   });
   const input = await prompt.run();
-  return input.template === 'default' ? 'main' : 'hlxp'
+  return input.template === "default"
+    ? "chore/extract-display-runtime-from-boot"
+    : "hlxp";
 }
 
 async function getPackageName() {
   const name = await prompt(chalk.cyan("Enter project name: "));
   if (!validatePackageName(name).validForNewPackages) {
-    shell.echo(formatErrorLog("The provided name must be a valid NPM package name."));
+    shell.echo(
+      formatErrorLog("The provided name must be a valid NPM package name.")
+    );
     return getPackageName();
   }
   return name;
@@ -84,9 +96,10 @@ module.exports = {
   setupSnippet,
   formatSuccessLog,
   formatErrorLog,
+  setGithubAccessToken,
   resolveTemplateBranch,
   exitOnError,
   updatePackageJson,
   getPackageJson,
-  getPackageName
-}
+  getPackageName,
+};
