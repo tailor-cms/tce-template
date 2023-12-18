@@ -1,5 +1,29 @@
 # Changelog
 
+### v0.3.0 2023-12-18
+
+#### Changes
+- Extracted display runtime to enable plugging in custom one
+- Loading .env variables from the project root and passing them to the server
+  runtime
+- Providing interaction and data mock for element linking (upon Edit component
+  emitting the link event)
+
+#### Migration instructions
+- Update the package.json:
+  - Bump tce-boot to `0.3.1`
+  - [Install @tailor-cms/tce-display-runtime as dev dependency](https://github.com/tailor-cms/tce-template/pull/26/files#diff-7ae45ad102eab3b6d7e7896acd08c427a9b25b346470d7bc6507b6481575d519R46)
+  - Install concurrently as dev dependency
+  - Add/change following entries in the script section
+    ```js
+      "dev": "concurrently 'pnpm boot:cek' 'pnpm boot:display' -n cek,display-runtime -c blue,cyan",
+      "boot:cek": "cd ./node_modules/@tailor-cms/tce-boot && pnpm start",
+      "boot:display": "export TCE_DISPLAY_DIR=${PWD}/packages/display/dist && cd ./node_modules/@tailor-cms/tce-display-runtime && pnpm dev optimize && pnpm dev",
+    ```
+- [Introduced package.json changes](https://github.com/tailor-cms/tce-template/pull/26/files#diff-7ae45ad102eab3b6d7e7896acd08c427a9b25b346470d7bc6507b6481575d519)
+
+---
+
 ### v0.2.0 2023-11-09
 
 #### Changes
