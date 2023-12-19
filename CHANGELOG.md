@@ -27,6 +27,16 @@
 
 ---
 
+### v0.2.1 2023-11-22
+
+#### Changes
+- Enabled passing data context from the `onUserInteraction` hook to the
+  `beforeDisplay` hook (via the `transientState` prop). For more details see the
+  [docs](https://tailor-cms.github.io/xt/server-package.html#onuserinteraction-hook).
+
+#### Migration instructions
+- Bump tce-boot to `0.2.1`
+
 ### v0.2.0 2023-11-09
 
 #### Changes
