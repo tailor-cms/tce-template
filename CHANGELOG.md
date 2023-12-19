@@ -1,6 +1,6 @@
 # Changelog
 
-### v0.3.3 2023-12-19
+### v0.3.4 2023-12-19
 
 #### Changes
 - Extracted display runtime to enable plugging in custom one
@@ -13,8 +13,8 @@
 
 #### Migration instructions
 - Update the package.json:
-  - Bump tce-boot to `0.3.3`
-  - [Install @tailor-cms/tce-display-runtime as dev dependency](https://github.com/tailor-cms/tce-template/tree/chore/extract-display-runtime-from-boot)
+  - Bump tce-boot to `0.3.2`
+  - [Install @tailor-cms/tce-display-runtime as dev dependency](https://github.com/tailor-cms/tce-template/blob/chore/extract-display-runtime-from-boot/package.json#L46)
   - Install concurrently as dev dependency
   - Add/change following entries in the script section
     ```js
