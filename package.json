@@ -1,7 +1,7 @@
 {
   "name": "@tailor-cms/tce-template",
   "description": "Content element template",
-  "version": "0.3.0-beta.1",
+  "version": "0.3.2",
   "author": "ExtensionEngine <info@extensionengine.com>",
   "type": "module",
   "exports": {
@@ -42,8 +42,8 @@
   "devDependencies": {
     "@playwright/test": "^1.37.1",
     "@tailor-cms/eslint-config": "0.0.2",
-    "@tailor-cms/tce-boot": "0.3.2-beta.2",
-    "@tailor-cms/tce-display-runtime": "^0.2.1",
+    "@tailor-cms/tce-boot": "0.3.2",
+    "@tailor-cms/tce-display-runtime": "0.2.1",
     "@types/node": "^20.5.7",
     "concurrently": "^8.2.2",
     "prettier": "^2.7.1",
