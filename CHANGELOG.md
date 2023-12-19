@@ -1,6 +1,6 @@
 # Changelog
 
-### v0.3.0 2023-12-18
+### v0.3.2 2023-12-19
 
 #### Changes
 - Extracted display runtime to enable plugging in custom one
@@ -8,6 +8,8 @@
   runtime
 - Providing interaction and data mock for element linking (upon Edit component
   emitting the link event)
+- Enabling running within container, providing example Dockerfile and
+  docker-compose.yml
 
 #### Migration instructions
 - Update the package.json:
