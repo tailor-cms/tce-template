@@ -22,3 +22,9 @@ Test
 ```sh
 pnpm test
 ```
+
+## Run with Docker
+
+```sh
+docker compose -f .codesandbox/docker-compose.yml up
+```
