@@ -53,6 +53,7 @@ async function getPackageJson() {
 async function setGithubAccessToken() {
   const prompt = new Password({ message: "GitHub PAT token" });
   const token = await prompt.run();
+  if (!token) return;
   const registry = "@harvard-lxp:registry=https://npm.pkg.github.com/";
   const creds = `//npm.pkg.github.com/:_authToken=${token}`;
   return fs.writeFile("./.npmrc", `${registry}\n${creds}`);
@@ -75,9 +76,7 @@ async function resolveTemplateBranch() {
     choices: ["default", "hlxp (requires credentials)"],
   });
   const input = await prompt.run();
-  return input.template === "default"
-    ? "chore/extract-display-runtime-from-boot"
-    : "hlxp";
+  return input === "default" ? "main" : "hlxp";
 }
 
 async function getPackageName() {
