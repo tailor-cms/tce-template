@@ -27,9 +27,6 @@
     "lint:fix": "pnpm -r run lint --fix",
     "test": "pnpm playwright test --config ./test/playwright.config.ts"
   },
-  "bin": {
-    "@tailor-cms/tce-template": "bin/index.cjs"
-  },
   "dependencies": {
     "@npmcli/package-json": "^2.0.0",
     "chalk": "^4.1.2",
