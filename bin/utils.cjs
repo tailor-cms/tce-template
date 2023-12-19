@@ -53,6 +53,7 @@ async function getPackageJson() {
 async function setGithubAccessToken() {
   const prompt = new Password({ message: "GitHub PAT token" });
   const token = await prompt.run();
+  if (!token) return;
   const registry = "@harvard-lxp:registry=https://npm.pkg.github.com/";
   const creds = `//npm.pkg.github.com/:_authToken=${token}`;
   return fs.writeFile("./.npmrc", `${registry}\n${creds}`);
