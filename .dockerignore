@@ -1,0 +1,9 @@
+bin
+node_modules
+.codesandbox
+.git
+.gitignore
+.github
+.editorconfig
+.dockerignore
+README.md

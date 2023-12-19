@@ -1,0 +1,19 @@
+services:
+  tce-runtime:
+    image: "tce-runtime-i"
+    container_name: "tce-runtime-c"
+    build:
+      dockerfile: "./Dockerfile"
+      context: "."
+    # Within docker network
+    expose:
+      - "8010"
+      - "8020"
+      - "8030"
+      - "8080"
+    # Within host
+    ports:
+      - "8010:8010"
+      - "8020:8020"
+      - "8030:8030"
+      - "8080:8080"

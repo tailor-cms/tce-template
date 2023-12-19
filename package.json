@@ -1,7 +1,7 @@
 {
   "name": "@tailor-cms/tce-template",
   "description": "Content element template",
-  "version": "0.2.1",
+  "version": "0.3.4",
   "author": "ExtensionEngine <info@extensionengine.com>",
   "type": "module",
   "exports": {
@@ -19,7 +19,9 @@
     }
   },
   "scripts": {
-    "dev": "cd ./node_modules/@tailor-cms/tce-boot && pnpm start",
+    "dev": "concurrently 'pnpm boot:cek' 'pnpm boot:display' -n cek,display-runtime -c blue,cyan",
+    "boot:cek": "cd ./node_modules/@tailor-cms/tce-boot && pnpm start",
+    "boot:display": "export TCE_DISPLAY_DIR=${PWD}/packages/display/dist && cd ./node_modules/@tailor-cms/tce-display-runtime && pnpm dev optimize && pnpm dev",
     "build": "pnpm -r run build",
     "lint": "pnpm -r run lint",
     "lint:fix": "pnpm -r run lint --fix",
@@ -40,12 +42,14 @@
   "devDependencies": {
     "@playwright/test": "^1.37.1",
     "@tailor-cms/eslint-config": "0.0.2",
-    "@tailor-cms/tce-boot": "0.2.1",
+    "@tailor-cms/tce-boot": "0.3.2",
+    "@tailor-cms/tce-display-runtime": "0.2.1",
     "@types/node": "^20.5.7",
-    "prettier": "^2.7.1",
+    "concurrently": "^8.2.2",
+    "prettier": "3.1.1",
     "typescript": "^5.1.6",
-    "vue-template-compiler": "2.7.14",
-    "vue": "2.7.14"
+    "vue": "2.7.14",
+    "vue-template-compiler": "2.7.14"
   },
   "pnpm": {
     "packageExtensions": {
