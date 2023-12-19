@@ -1,0 +1,11 @@
+{
+  "$schema": "https://codesandbox.io/schemas/tasks.json",
+  "setupTasks": ["pnpm i"],
+  "tasks": {
+    "tce-start": {
+      "name": "Run dev server",
+      "command": "pnpm dev",
+      "runAtStart": true
+    }
+  }
+}
