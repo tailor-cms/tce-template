@@ -3,7 +3,7 @@ services:
     image: "tce-runtime-i"
     container_name: "tce-runtime-c"
     build:
-      dockerfile: ".codesandbox/Dockerfile"
+      dockerfile: "./Dockerfile"
       context: "."
     # Witin docker network
     expose:
