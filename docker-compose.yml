@@ -4,7 +4,7 @@ services:
     container_name: "tce-runtime-c"
     build:
       dockerfile: ".codesandbox/Dockerfile"
-      context: "../"
+      context: "."
     # Witin docker network
     expose:
       - "8010"
