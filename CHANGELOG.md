@@ -11,8 +11,8 @@
 
 #### Migration instructions
 - Update the package.json:
-  - Bump tce-boot to `0.3.1`
-  - [Install @tailor-cms/tce-display-runtime as dev dependency](https://github.com/tailor-cms/tce-template/pull/26/files#diff-7ae45ad102eab3b6d7e7896acd08c427a9b25b346470d7bc6507b6481575d519R46)
+  - Bump tce-boot to `0.3.2`
+  - [Install @tailor-cms/tce-display-runtime as dev dependency](https://github.com/tailor-cms/tce-template/tree/chore/extract-display-runtime-from-boot)
   - Install concurrently as dev dependency
   - Add/change following entries in the script section
     ```js
@@ -20,7 +20,8 @@
       "boot:cek": "cd ./node_modules/@tailor-cms/tce-boot && pnpm start",
       "boot:display": "export TCE_DISPLAY_DIR=${PWD}/packages/display/dist && cd ./node_modules/@tailor-cms/tce-display-runtime && pnpm dev optimize && pnpm dev",
     ```
-- [Introduced package.json changes](https://github.com/tailor-cms/tce-template/pull/26/files#diff-7ae45ad102eab3b6d7e7896acd08c427a9b25b346470d7bc6507b6481575d519)
+- Copy Dockerfile, docker-compose.yml and .dockerignore (not required)
+- [For more details see the PR](https://github.com/tailor-cms/tce-template/tree/chore/extract-display-runtime-from-boot)
 
 ---
 
