@@ -39,10 +39,10 @@ importers:
         specifier: 0.0.2
         version: 0.0.2(@typescript-eslint/eslint-plugin@6.15.0)(@typescript-eslint/parser@6.15.0)(eslint-config-prettier@9.1.0)(eslint-config-semistandard@17.0.0)(eslint-config-standard@17.1.0)(eslint-plugin-import@2.29.1)(eslint-plugin-n@16.4.0)(eslint-plugin-prettier@5.0.1)(eslint-plugin-promise@6.1.1)(eslint-plugin-vue@9.19.2)(eslint-plugin-vuejs-accessibility@2.2.0)(eslint@8.56.0)
       '@tailor-cms/tce-boot':
-        specifier: 0.3.2-beta.2
-        version: 0.3.2-beta.2(@types/node@20.10.5)
+        specifier: 0.3.2
+        version: 0.3.2(@types/node@20.10.5)
       '@tailor-cms/tce-display-runtime':
-        specifier: ^0.2.1
+        specifier: 0.2.1
         version: 0.2.1(@types/node@20.10.5)
       '@types/node':
         specifier: ^20.5.7
@@ -941,8 +941,8 @@ packages:
       eslint-plugin-vuejs-accessibility: 2.2.0(eslint@8.56.0)
     dev: true
 
-  /@tailor-cms/tce-boot@0.3.2-beta.2(@types/node@20.10.5):
-    resolution: {integrity: sha512-lB8bBx1zsuXvr2afmOxyIZGu+Bkgk+8DtWEwEhtiRONVHO0/9PqgCEGEiLtEa8UEJDnicwN0bYU37MC9aN2t6Q==}
+  /@tailor-cms/tce-boot@0.3.2(@types/node@20.10.5):
+    resolution: {integrity: sha512-0tWA5BnKuikh1RePIasUyXFz3BzTWx5pi7OlQcZrK6dchDbM6+vy1aqdT3BM7bKZ+TEY94MAs3a4Re/8fy0zbQ==}
     dependencies:
       '@tailor-cms/tce-display-runtime': 0.2.1(@types/node@20.10.5)
       '@tailor-cms/tce-edit-runtime': 0.2.2(@types/node@20.10.5)
