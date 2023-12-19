@@ -26,5 +26,5 @@ pnpm test
 ## Run with Docker
 
 ```sh
-docker compose -f .codesandbox/docker-compose.yml up
+docker compose up
 ```
