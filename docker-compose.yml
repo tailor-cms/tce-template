@@ -5,13 +5,13 @@ services:
     build:
       dockerfile: "./Dockerfile"
       context: "."
-    # Witin docker network
+    # Within docker network
     expose:
       - "8010"
       - "8020"
       - "8030"
       - "8080"
-    # Witin host
+    # Within host
     ports:
       - "8010:8010"
       - "8020:8020"
