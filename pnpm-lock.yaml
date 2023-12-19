@@ -39,8 +39,8 @@ importers:
         specifier: 0.0.2
         version: 0.0.2(@typescript-eslint/eslint-plugin@6.15.0)(@typescript-eslint/parser@6.15.0)(eslint-config-prettier@9.1.0)(eslint-config-semistandard@17.0.0)(eslint-config-standard@17.1.0)(eslint-plugin-import@2.29.1)(eslint-plugin-n@16.4.0)(eslint-plugin-prettier@5.0.1)(eslint-plugin-promise@6.1.1)(eslint-plugin-vue@9.19.2)(eslint-plugin-vuejs-accessibility@2.2.0)(eslint@8.56.0)
       '@tailor-cms/tce-boot':
-        specifier: 0.3.2
-        version: 0.3.2(@types/node@20.10.5)
+        specifier: 0.3.3-beta.2
+        version: 0.3.3-beta.2(@types/node@20.10.5)
       '@tailor-cms/tce-display-runtime':
         specifier: 0.2.1
         version: 0.2.1(@types/node@20.10.5)
@@ -941,11 +941,11 @@ packages:
       eslint-plugin-vuejs-accessibility: 2.2.0(eslint@8.56.0)
     dev: true
 
-  /@tailor-cms/tce-boot@0.3.2(@types/node@20.10.5):
-    resolution: {integrity: sha512-0tWA5BnKuikh1RePIasUyXFz3BzTWx5pi7OlQcZrK6dchDbM6+vy1aqdT3BM7bKZ+TEY94MAs3a4Re/8fy0zbQ==}
+  /@tailor-cms/tce-boot@0.3.3-beta.2(@types/node@20.10.5):
+    resolution: {integrity: sha512-uckqbgkKKCJ8OwkZ29qPYITVfprDtGDZ/ZqSJwefciCLezlLgTWec3V85VJqSlkseM/isnNiEXlLp/5fdKxRkQ==}
     dependencies:
       '@tailor-cms/tce-display-runtime': 0.2.1(@types/node@20.10.5)
-      '@tailor-cms/tce-edit-runtime': 0.2.2(@types/node@20.10.5)
+      '@tailor-cms/tce-edit-runtime': 0.2.3-beta.1(@types/node@20.10.5)
       '@tailor-cms/tce-preview-runtime': 0.2.2(@types/node@20.10.5)
       '@tailor-cms/tce-server-runtime': 0.2.2(@types/node@20.10.5)
       boxen: 7.1.1
@@ -1019,8 +1019,8 @@ packages:
       - webpack-plugin-vuetify
     dev: true
 
-  /@tailor-cms/tce-edit-runtime@0.2.2(@types/node@20.10.5):
-    resolution: {integrity: sha512-35QxoEHweIJgdH7Wp/+OfVwj3fmJ8lMh2m0IXOUmFu/EqGn0cHtSJZMqqihR0xW8TWVAJyfBB9BPl1k+rp4zdA==}
+  /@tailor-cms/tce-edit-runtime@0.2.3-beta.1(@types/node@20.10.5):
+    resolution: {integrity: sha512-dikQ68PSBcNM0cYPKukoEC3gX+W/vJo1DFKiFrzmk2TmMETEd4earq42e8HWkjQKzGO7qI5ft02wpWoamZgdeA==}
     dependencies:
       '@extensionengine/vue-radio': 1.0.0-beta.5
       '@mdi/font': 7.2.96
