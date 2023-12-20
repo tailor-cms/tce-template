@@ -1,5 +1,15 @@
 # Changelog
 
+### v0.3.5 2023-12-20
+
+#### Changes
+- Bugfixes
+
+#### Migration instructions
+- Bump tce-boot to `0.3.3`
+
+---
+
 ### v0.3.4 2023-12-19
 
 #### Changes
