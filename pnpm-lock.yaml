@@ -42,8 +42,8 @@ importers:
         specifier: 0.0.2
         version: 0.0.2(@typescript-eslint/eslint-plugin@6.15.0)(@typescript-eslint/parser@6.15.0)(eslint-config-prettier@9.1.0)(eslint-config-semistandard@17.0.0)(eslint-config-standard@17.1.0)(eslint-plugin-import@2.29.1)(eslint-plugin-n@16.4.0)(eslint-plugin-prettier@5.0.1)(eslint-plugin-promise@6.1.1)(eslint-plugin-vue@9.19.2)(eslint-plugin-vuejs-accessibility@2.2.0)(eslint@8.56.0)
       '@tailor-cms/tce-boot':
-        specifier: 0.3.2
-        version: 0.3.2(@types/node@20.10.5)
+        specifier: 0.3.3
+        version: 0.3.3(@types/node@20.10.5)
       '@types/node':
         specifier: ^20.5.7
         version: 20.10.5
@@ -698,10 +698,10 @@ packages:
       '@harvard-lxp/font-awesome': 0.0.1
       '@harvard-lxp/lxp-ui': 0.0.6(@harvard-lxp/font-awesome@0.0.1)(@types/node@20.10.5)(lodash@4.17.21)(roboto-fontface@0.10.0)(sass@1.68.0)(vue@3.3.4)(vuetify@3.3.17)
       '@vitejs/plugin-vue': 4.3.4(vite@4.4.9)(vue@3.3.4)
-      '@vue/reactivity': 3.3.4
-      '@vue/runtime-core': 3.3.4
-      '@vue/runtime-dom': 3.3.4
-      '@vue/shared': 3.3.4
+      '@vue/reactivity': 3.3.12
+      '@vue/runtime-core': 3.3.12
+      '@vue/runtime-dom': 3.3.12
+      '@vue/shared': 3.3.12
       ky: 1.0.1
       lodash: 4.17.21
       sass: 1.68.0
@@ -1039,11 +1039,11 @@ packages:
       eslint-plugin-vuejs-accessibility: 2.2.0(eslint@8.56.0)
     dev: true
 
-  /@tailor-cms/tce-boot@0.3.2(@types/node@20.10.5):
-    resolution: {integrity: sha512-0tWA5BnKuikh1RePIasUyXFz3BzTWx5pi7OlQcZrK6dchDbM6+vy1aqdT3BM7bKZ+TEY94MAs3a4Re/8fy0zbQ==}
+  /@tailor-cms/tce-boot@0.3.3(@types/node@20.10.5):
+    resolution: {integrity: sha512-/KueROr1jqw50x62vT5muJEBoz43G97F+xhYrEF9Mh2Stq0vch0zRyw3KqB596KDZzl0LI7qTRP0HjBmbT0G4A==}
     dependencies:
       '@tailor-cms/tce-display-runtime': 0.2.1(@types/node@20.10.5)
-      '@tailor-cms/tce-edit-runtime': 0.2.2(@types/node@20.10.5)
+      '@tailor-cms/tce-edit-runtime': 0.2.3(@types/node@20.10.5)
       '@tailor-cms/tce-preview-runtime': 0.2.2(@types/node@20.10.5)
       '@tailor-cms/tce-server-runtime': 0.2.2(@types/node@20.10.5)
       boxen: 7.1.1
@@ -1117,8 +1117,8 @@ packages:
       - webpack-plugin-vuetify
     dev: true
 
-  /@tailor-cms/tce-edit-runtime@0.2.2(@types/node@20.10.5):
-    resolution: {integrity: sha512-35QxoEHweIJgdH7Wp/+OfVwj3fmJ8lMh2m0IXOUmFu/EqGn0cHtSJZMqqihR0xW8TWVAJyfBB9BPl1k+rp4zdA==}
+  /@tailor-cms/tce-edit-runtime@0.2.3(@types/node@20.10.5):
+    resolution: {integrity: sha512-IeLE1AQZTQif9Z3yJasWsu2rymvtSZBZCmOVqeo1Tu0apzN/1NX/MSR1fFFvaeRUh49iTsIl+txEK2P8irwW6g==}
     dependencies:
       '@extensionengine/vue-radio': 1.0.0-beta.5
       '@mdi/font': 7.2.96
