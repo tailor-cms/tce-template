@@ -33,7 +33,7 @@
       "boot:display": "export TCE_DISPLAY_DIR=${PWD}/packages/display/dist && cd ./node_modules/@tailor-cms/tce-display-runtime && pnpm dev optimize && pnpm dev",
     ```
 - Copy Dockerfile, docker-compose.yml and .dockerignore (not required)
-- [For more details see the PR](https://github.com/tailor-cms/tce-template/tree/chore/extract-display-runtime-from-boot)
+- [For more details see the PR](https://github.com/tailor-cms/tce-template/pull/26/files)
 
 ---
 
