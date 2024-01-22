@@ -21,7 +21,7 @@
   "scripts": {
     "dev": "concurrently 'pnpm boot:cek' 'pnpm boot:display' -n cek,display-runtime -c blue,cyan",
     "boot:cek": "cd ./node_modules/@tailor-cms/tce-boot && pnpm start",
-    "boot:display": "export TCE_DISPLAY_DIR=${PWD}/packages/display/dist && cd ./node_modules/@tailor-cms/tce-display-runtime && pnpm dev optimize && pnpm dev",
+    "boot:display": "export TCE_DISPLAY_DIR=${PWD}/packages/display/dist && cd ./node_modules/@tailor-cms/tce-display-runtime && pnpm vite optimize && pnpm dev",
     "build": "pnpm -r run build",
     "lint": "pnpm -r run lint",
     "lint:fix": "pnpm -r run lint --fix",
@@ -42,8 +42,8 @@
   "devDependencies": {
     "@playwright/test": "^1.37.1",
     "@tailor-cms/eslint-config": "0.0.2",
-    "@tailor-cms/tce-boot": "0.3.3",
-    "@tailor-cms/tce-display-runtime": "0.2.1",
+    "@tailor-cms/tce-boot": "0.4.0-beta.8",
+    "@tailor-cms/tce-display-runtime": "0.4.0-beta.6",
     "@types/node": "^20.5.7",
     "concurrently": "^8.2.2",
     "prettier": "3.1.1",
