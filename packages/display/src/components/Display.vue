@@ -1,6 +1,6 @@
 <template>
   <div class="tce-root">
-    <p>This is the Display version of the content element: {{ id }}</p>
+    <p>This is the Display version of the content element id: {{ id }}</p>
     <div class="mt-6 mb-2">
       Counter:
       <span class="font-weight-bold">{{ data.count }}</span>
