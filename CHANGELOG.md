@@ -1,5 +1,23 @@
 # Changelog
 
+### v0.4.0 2024-01-24
+
+#### Changes
+- Ability to configure service ports and end-user urls
+- Session based element creation and user state handling
+- Ability to set multiple display contexts
+- Ability to select particular display context in the UI
+- Ability to reset element
+- Ability to reset element state
+- Tracking element state mutations
+- Tracking user state mutations
+
+#### Migration instructions
+- Bump tce-boot to `0.4.0`
+- cp .env.example .env and edit env variables
+
+---
+
 ### v0.3.5 2023-12-20
 
 #### Changes
