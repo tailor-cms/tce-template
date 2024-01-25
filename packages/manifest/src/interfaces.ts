@@ -1,4 +1,7 @@
-export interface ElementData {}
+// Example counter component
+export interface ElementData {
+  count: number;
+}
 
 export interface Element {
   id: number;

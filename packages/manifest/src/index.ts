@@ -12,7 +12,8 @@ export const name = 'Custom element';
 
 // Function which inits element state (data property on the Content Element
 // entity)
-export const initState: DataInitializer = (): ElementData => ({});
+// e.g. for simple counter component:
+export const initState: DataInitializer = (): ElementData => ({ count: 0 });
 
 // Can be loaded from package.json
 export const version = '1.0';
@@ -27,7 +28,10 @@ const ui = {
 };
 
 export const mocks = {
-  displayContexts: [{ name: 'Test', data: { exampleValue: 'test' } }],
+  displayContexts: [
+    { name: 'Test preset 1', data: { state: 'I have a value' } },
+    { name: 'Test preset 2', data: { state: 'I have a different value' } },
+  ],
 };
 
 const manifest: ElementManifest = {

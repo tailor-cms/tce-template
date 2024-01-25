@@ -1,5 +1,34 @@
 # Changelog
 
+### v0.4.0 2024-01-24
+
+#### Changes
+- Ability to configure service ports and end-user urls
+- Session based element creation and user state handling
+- Ability to set multiple display contexts
+- Ability to select particular display context in the UI
+- Ability to reset element
+- Ability to reset element state
+- Tracking element state mutations
+- Tracking user state mutations
+
+#### Migration instructions
+- Bump `@tailor-cms/tce-boot` and `@tailor-cms/tce-display-runtime` to `0.4.0`
+- Update `@playwright/test` to `1.41.1`
+- Update `.github/actions/setup` to use `node-version: 20.11`
+- Update boot command for display runtime to:
+  `export TCE_DISPLAY_DIR=${PWD}/packages/display/dist && cd ./node_modules/@tailor-cms/tce-display-runtime && pnpm vite optimize && pnpm dev`
+-  Run `cp .env.example .env` and edit the env variables
+
+For custom display runtime, make sure introduced tce-display changes are applied:
+- [src/App.vue](https://github.com/tailor-cms/xt/pull/11/files#diff-db34c38a347cc14337f0cf448966777333b1b6fc3873938a9c08886e779a31b9)
+- [vite.config.ts](https://github.com/tailor-cms/xt/pull/11/files#diff-c809e1053d727cda339ff7dcfb8a9d152af08c8c7ebd2d52c4d8270ae757b39a)
+- [package.json](https://github.com/tailor-cms/xt/pull/11/files#diff-40493a968ba64f33ff15183fa6ff583764e57a53fc612a15667b858d7a1d72b1)
+- Make sure that `boot:display` command references custom package instead of
+  `@tailor-cms/tce-display-runtime`
+
+---
+
 ### v0.3.5 2023-12-20
 
 #### Changes

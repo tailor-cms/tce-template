@@ -40,7 +40,7 @@ export function afterRetrieve(
 export function beforeDisplay(element: Element, context: any) {
   console.log('beforeDisplay hook');
   console.log('beforeDisplay context', context);
-  return USER_STATE;
+  return { ...context, ...USER_STATE };
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -52,7 +52,10 @@ export function onUserInteraction(
   console.log('onUserInteraction', context, payload);
   // Simulate user state update within CEK
   if (IS_CEK) {
+    // Only for showcase purposes
     USER_STATE.interactionTimestamp = new Date().getTime();
+    // Can be reset to initial / mocked state via UI
+    context.contextTimestamp = USER_STATE.interactionTimestamp;
     Object.assign(USER_STATE, payload);
   }
   // Can have arbitrary return value (interpreted by target system)
