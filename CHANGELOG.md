@@ -22,7 +22,7 @@
 
 For custom display runtime, make sure introduced tce-display changes are applied:
 - [src/App.vue](https://github.com/tailor-cms/xt/pull/11/files#diff-db34c38a347cc14337f0cf448966777333b1b6fc3873938a9c08886e779a31b9)
-- [vite.config.js](https://github.com/tailor-cms/xt/pull/11/files#diff-c809e1053d727cda339ff7dcfb8a9d152af08c8c7ebd2d52c4d8270ae757b39a)
+- [vite.config.ts](https://github.com/tailor-cms/xt/pull/11/files#diff-c809e1053d727cda339ff7dcfb8a9d152af08c8c7ebd2d52c4d8270ae757b39a)
 - [package.json](https://github.com/tailor-cms/xt/pull/11/files#diff-40493a968ba64f33ff15183fa6ff583764e57a53fc612a15667b858d7a1d72b1)
 - Make sure that `boot:display` command references custom package instead of
   `@tailor-cms/tce-display-runtime`
