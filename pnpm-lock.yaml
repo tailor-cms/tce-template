@@ -58,7 +58,7 @@ importers:
   packages/display:
     dependencies:
       vue:
-        specifier: 3.3.4
+        specifier: ^3.3.4
         version: 3.3.4
     devDependencies:
       '@tailor-cms/eslint-config':
@@ -83,7 +83,7 @@ importers:
   packages/edit:
     dependencies:
       vue:
-        specifier: 3.3.4
+        specifier: ^3.3.4
         version: 3.3.4
     devDependencies:
       '@tailor-cms/eslint-config':
