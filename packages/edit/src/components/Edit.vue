@@ -9,7 +9,8 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
+import { defineEmits, defineProps } from 'vue';
 import { Element } from 'tce-manifest';
 
 const emit = defineEmits(['save']);
