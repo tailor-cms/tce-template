@@ -20,11 +20,11 @@
     "lint:fix": "pnpm lint --fix"
   },
   "peerDependencies": {
-    "vue": "^2.7.13"
+    "vue": "^3.3.4"
   },
   "devDependencies": {
     "@tailor-cms/eslint-config": "0.0.2",
-    "@vitejs/plugin-vue2": "^2.2.0",
+    "@vitejs/plugin-vue": "^4.2.3",
     "tce-manifest": "workspace:*",
     "typescript": "^5.1.6",
     "vite": "^4.4.5",
