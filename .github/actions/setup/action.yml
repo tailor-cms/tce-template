@@ -2,9 +2,7 @@ name: Setup pnpm and install cache
 runs:
   using: composite
   steps:
-  - uses: pnpm/action-setup@v2
-    with:
-      version: 8.7.4
+  - uses: pnpm/action-setup@v4
   - name: Setup node to enable caching
     uses: actions/setup-node@v3
     with:
