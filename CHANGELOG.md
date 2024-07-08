@@ -1,5 +1,11 @@
 # Changelog
 
+### v0.5.1 2024-04-05
+
+#### Changes
+- Bumped `tce-boot` to version `0.5.1` which enables optional toolbars and uses
+  the latest vuetify version
+
 ### v0.5.0 2024-04-05
 
 #### Changes
