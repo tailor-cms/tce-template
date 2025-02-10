@@ -1,5 +1,10 @@
 # Changelog
 
+### v1.0.0 2025-02-25
+- Bumped `tce-boot` to version `1.0.0` which drops support for the Vue 2 runtime.
+  Removed display runtime prompt since now only one is supported. 
+- Other dependencies have also been bumped to the latest version.
+
 ### v0.5.1 2024-04-05
 
 #### Changes
