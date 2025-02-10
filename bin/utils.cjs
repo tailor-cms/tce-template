@@ -1,7 +1,6 @@
-const fs = require("node:fs/promises");
 const readline = require("node:readline");
 
-const { Password, Select, Snippet } = require("enquirer");
+const { Snippet } = require("enquirer");
 const chalk = require("chalk");
 const PackageJson = require("@npmcli/package-json");
 const shell = require("shelljs");
@@ -50,15 +49,6 @@ async function getPackageJson() {
   }
 }
 
-async function setGithubAccessToken() {
-  const prompt = new Password({ message: "GitHub PAT token" });
-  const token = await prompt.run();
-  if (!token) return;
-  const registry = "@harvard-lxp:registry=https://npm.pkg.github.com/";
-  const creds = `//npm.pkg.github.com/:_authToken=${token}`;
-  return fs.writeFile("./.npmrc", `${registry}\n${creds}`);
-}
-
 async function updatePackageJson(data, path = "./") {
   try {
     const pkgJson = await PackageJson.load(path);
@@ -67,15 +57,6 @@ async function updatePackageJson(data, path = "./") {
   } catch (err) {
     exitOnError("Error updating package.json: " + err.message);
   }
-}
-
-async function resolveTemplateBranch() {
-  const prompt = new Select({
-    name: "template",
-    message: "Select a template",
-    choices: ["default", "tailor-next", "hlxp"],
-  });
-  return prompt.run();
 }
 
 async function getPackageName() {

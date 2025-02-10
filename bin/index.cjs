@@ -10,8 +10,6 @@ const {
   updatePackageJson,
   getPackageJson,
   getPackageName,
-  resolveTemplateBranch,
-  setGithubAccessToken,
   SUCCESS_CODE,
 } = require("./utils.cjs");
 
@@ -26,10 +24,8 @@ function validateEnvironment() {
 async function cloneRepository() {
   shell.echo(formatSuccessLog("1/4 Cloning respository"));
   const name = await getPackageName();
-  const branch = await resolveTemplateBranch();
-  await degit(`https://github.com/tailor-cms/tce-template#${branch}`).clone(name);
+  await degit("tailor-cms/tce-template", { mode: "git" }).clone(name);
   shell.cd(`./${name}`);
-  if (branch === 'hlxp') await setGithubAccessToken();
   await updatePackageJson({ name });
 }
 

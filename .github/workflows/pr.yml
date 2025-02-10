@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup pnpm and install deps
         uses: ./.github/actions/setup
       - name: Run linter
@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup pnpm and install deps
         uses: ./.github/actions/setup
       - name: Build packages
@@ -26,7 +26,7 @@ jobs:
         run: pnpm dev & sleep 50
       - name: Run E2E suite
         run: pnpm test
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: playwright-report
