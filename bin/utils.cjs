@@ -73,10 +73,9 @@ async function resolveTemplateBranch() {
   const prompt = new Select({
     name: "template",
     message: "Select a template",
-    choices: ["default", "hlxp (requires credentials)"],
+    choices: ["default", "tailor-next", "hlxp"],
   });
-  const input = await prompt.run();
-  return input === "default" ? "main" : "hlxp";
+  return prompt.run();
 }
 
 async function getPackageName() {

@@ -1,5 +1,29 @@
 # Changelog
 
+### v0.5.1 2024-04-05
+
+#### Changes
+- Bumped `tce-boot` to version `0.5.1` which enables optional toolbars and uses
+  the latest vuetify version
+
+### v0.5.0 2024-04-05
+
+#### Changes
+- Bumped `tce-boot` to version `0.5.0` to enable Vue 3 based authoring runtime
+  (targeting Tailor >=7.0.0). For more details see the
+  [CHANGELOG](https://github.com/tailor-cms/xt/blob/main/CHANGELOG.md#changelog).
+- Created Vue 3 based package template (`tailor-next` branch).
+
+#### Migration instructions
+- Bump tce-boot to `0.5.0`
+- Replace Vue `2.x` package in the edit subpackage with the Vue `^3.3.4`
+- Replace `@vitejs/plugin-vue2` with `@vitejs/plugin-vue": "^4.2.3` and update
+  `vite.config.ts` to use the new version of the plugin
+- Set `TAILOR_NEXT=true` .env variable
+- Migrate element specific Vue 2 codebase to Vue 3
+- For more details regarding the introduced changes see the
+  [0.5.0 PR](https://github.com/tailor-cms/tce-template/pull/29/files)
+
 ### v0.4.0 2024-01-24
 
 #### Changes
