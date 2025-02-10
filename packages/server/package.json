@@ -22,7 +22,7 @@
     "lint:fix": "pnpm lint --fix"
   },
   "devDependencies": {
-    "@tailor-cms/cek-common": "^0.0.3",
+    "@tailor-cms/cek-common": "^0.0.4",
     "@tailor-cms/eslint-config": "0.0.2",
     "tce-manifest": "workspace:*",
     "tsup": "^8.3.6",
