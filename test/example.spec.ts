@@ -5,7 +5,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test('Renders Edit component', async ({ page }) => {
-  const editFrame = page.frameLocator('#editPanel')
+  const editFrame = page.frameLocator('#editPanel>iframe')
   await expect(editFrame.getByText('Authoring component')).toBeVisible();
   const EDIT_COPY = 'Edit version of the content element';
   await expect(editFrame.getByText(EDIT_COPY)).toBeVisible();
@@ -16,7 +16,7 @@ test('Renders Edit component', async ({ page }) => {
 });
 
 test('Renders Display component', async ({ page }) => {
-  const displayFrame = page.frameLocator('#displayPanel')
+  const displayFrame = page.frameLocator('#displayPanel>iframe')
   await expect(displayFrame.getByText('End-user component')).toBeVisible();
   const DISPLAY_COPY = 'Display version of the content element';
   await expect(displayFrame.getByText(DISPLAY_COPY)).toBeVisible();
@@ -25,6 +25,12 @@ test('Renders Display component', async ({ page }) => {
 test('Renders server state panel', async ({ page }) => {
   const properties = ['uid', 'type', 'meta', 'data', 'contentId'];
   const bottomPanel = page.locator('#panelBottom');
+  const authoringTab = bottomPanel.getByRole('tab', { name: 'Authoring history' });
+  const userStateTab = bottomPanel.getByRole('tab', { name: 'End-user state history' });
+  await expect(authoringTab).toBeVisible();
+  await expect(bottomPanel.locator('pre').getByText('state')).toBeVisible();
+  await expect(userStateTab).toBeVisible();
+  await authoringTab.click();
   for (const prop of properties) {
     await expect(bottomPanel.getByText(prop)).toBeVisible();
   }
