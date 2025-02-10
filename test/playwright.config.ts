@@ -3,6 +3,8 @@ import { defineConfig, devices } from '@playwright/test';
 
 dotenv.config();
 
+if (!process.env.PREVIEW_RUNTIME_URL) process.env.PREVIEW_RUNTIME_URL = 'http://localhost:8001';
+
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
