@@ -43,8 +43,8 @@
   "devDependencies": {
     "@playwright/test": "1.50.1",
     "@tailor-cms/eslint-config": "0.0.2",
-    "@tailor-cms/tce-boot": "1.0.1",
-    "@tailor-cms/tce-display-runtime": "0.6.9",
+    "@tailor-cms/tce-boot": "1.0.2",
+    "@tailor-cms/tce-display-runtime": "0.6.10",
     "@types/node": "^22.13.1",
     "concurrently": "^9.1.2",
     "prettier": "3.5.0",
