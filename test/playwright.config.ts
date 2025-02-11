@@ -24,18 +24,11 @@ export default defineConfig({
   },
   projects: [
     {
-      name: 'setup',
-      testMatch: 'setup.ts',
-    },
-    {
       name: 'chrome',
-      testMatch: /.*\.spec\.ts/,
       use: {
         ...devices['Desktop Chrome'],
         channel: 'chrome',
-        storageState: './test/.boot-state.json',
       },
-      dependencies: ['setup'],
     },
   ]
 });
