@@ -1,8 +1,8 @@
 {
   "name": "@tailor-cms/tce-template",
   "description": "Content element template",
-  "version": "0.5.1",
-  "author": "ExtensionEngine <info@extensionengine.com>",
+  "version": "1.0.0",
+  "author": "Studion <info@gostudion.com>",
   "type": "module",
   "exports": {
     "./edit": {
@@ -31,23 +31,24 @@
     "@tailor-cms/tce-template": "bin/index.cjs"
   },
   "dependencies": {
-    "@npmcli/package-json": "^2.0.0",
+    "@npmcli/package-json": "^6.1.1",
     "chalk": "^4.1.2",
     "degit": "^2.8.4",
+    "dotenv": "^16.4.7",
     "enquirer": "^2.4.1",
     "has-flag": "^5.0.1",
     "shelljs": "^0.8.5",
-    "validate-npm-package-name": "^4.0.0"
+    "validate-npm-package-name": "^6.0.0"
   },
   "devDependencies": {
-    "@playwright/test": "1.41.1",
+    "@playwright/test": "1.50.1",
     "@tailor-cms/eslint-config": "0.0.2",
-    "@tailor-cms/tce-boot": "0.5.1",
-    "@tailor-cms/tce-display-runtime": "0.4.0",
-    "@types/node": "^20.5.7",
-    "concurrently": "^8.2.2",
-    "prettier": "3.1.1",
-    "typescript": "^5.1.6"
+    "@tailor-cms/tce-boot": "1.0.3",
+    "@tailor-cms/tce-display-runtime": "0.6.11",
+    "@types/node": "^22.13.1",
+    "concurrently": "^9.1.2",
+    "prettier": "3.5.0",
+    "typescript": "^5.7.3"
   },
   "publishConfig": {
     "access": "public"
