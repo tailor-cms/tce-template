@@ -1,7 +1,10 @@
 # Changelog
 
 ### v1.0.0 2025-02-12
-- Remove unused exports
+- Moved dotenv to dev  dependencies.
+
+### v1.0.0 2025-02-12
+- Remove unused exports.
 
 ### v1.0.0 2025-02-12
 - Bumped `tce-boot` to version `1.0.0` which drops support for the Vue 2 runtime.

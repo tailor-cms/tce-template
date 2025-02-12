@@ -17,9 +17,6 @@ importers:
       degit:
         specifier: ^2.8.4
         version: 2.8.4
-      dotenv:
-        specifier: ^16.4.7
-        version: 16.4.7
       enquirer:
         specifier: ^2.4.1
         version: 2.4.1
@@ -54,6 +51,9 @@ importers:
       concurrently:
         specifier: ^9.1.2
         version: 9.1.2
+      dotenv:
+        specifier: ^16.4.7
+        version: 16.4.7
       prettier:
         specifier: 3.5.0
         version: 3.5.0
