@@ -75,8 +75,6 @@ module.exports = {
   setupSnippet,
   formatSuccessLog,
   formatErrorLog,
-  setGithubAccessToken,
-  resolveTemplateBranch,
   exitOnError,
   updatePackageJson,
   getPackageJson,
