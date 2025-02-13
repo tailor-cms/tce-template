@@ -1,7 +1,7 @@
 {
   "name": "@tailor-cms/tce-template",
   "description": "Content element template",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Studion <info@gostudion.com>",
   "type": "module",
   "exports": {
@@ -34,7 +34,6 @@
     "@npmcli/package-json": "^6.1.1",
     "chalk": "^4.1.2",
     "degit": "^2.8.4",
-    "dotenv": "^16.4.7",
     "enquirer": "^2.4.1",
     "has-flag": "^5.0.1",
     "shelljs": "^0.8.5",
@@ -48,6 +47,7 @@
     "@tailor-cms/tce-display-runtime": "0.6.11",
     "@types/node": "^22.13.1",
     "concurrently": "^9.1.2",
+    "dotenv": "^16.4.7",
     "prettier": "3.5.0",
     "typescript": "^5.7.3"
   },
