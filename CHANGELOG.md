@@ -1,9 +1,13 @@
 # Changelog
 
-### v1.0.0 2025-02-12
-- Moved dotenv to dev  dependencies.
+### v1.0.3 2025-03-06
+- Bumped `tce-boot` which reduced load time. Also added d.ts exports when
+  building projece
 
-### v1.0.0 2025-02-12
+### v1.0.2 2025-02-12
+- Moved dotenv to dev dependencies.
+
+### v1.0.1 2025-02-12
 - Remove unused exports.
 
 ### v1.0.0 2025-02-12
