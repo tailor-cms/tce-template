@@ -1,5 +1,8 @@
 # Changelog
 
+### v1.0.4 2025-04-30
+- Bumped `tce-boot` with updated logo
+
 ### v1.0.3 2025-03-06
 - Bumped `tce-boot` which reduced load time. Also added d.ts exports when
   building projece

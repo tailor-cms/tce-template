@@ -1,7 +1,7 @@
 {
   "name": "@tailor-cms/tce-template",
   "description": "Content element template",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Studion <info@gostudion.com>",
   "type": "module",
   "exports": {
