@@ -22,7 +22,7 @@
     "lint:fix": "pnpm lint --fix"
   },
   "devDependencies": {
-    "@tailor-cms/eslint-config": "0.0.2",
+    "@tailor-cms/eslint-config": "1.0.0",
     "tsup": "^8.3.6",
     "typescript": "^5.7.3"
   },
