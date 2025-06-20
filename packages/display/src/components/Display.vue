@@ -3,7 +3,7 @@
     <p>This is the Display version of the content element id: {{ id }}</p>
     <div class="mt-6 mb-2">
       Counter:
-      <span class="font-weight-bold">{{ data.count }}</span>
+      <span class="font-weight-bold">{{ element.data.count }}</span>
     </div>
     <v-btn class="my-6" @click="submit">Update user state</v-btn>
     <div>
@@ -14,9 +14,9 @@
 </template>
 
 <script setup lang="ts">
-import { ElementData } from 'tce-manifest';
+import { Element } from 'tce-manifest';
 
-const props = defineProps<{ id: number; data: ElementData; userState: any }>();
+const props = defineProps<{ id: number; element: Element; userState: any }>();
 const emit = defineEmits(['interaction']);
 
 const submit = () => emit('interaction', { id: props.id });
