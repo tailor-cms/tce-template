@@ -22,9 +22,11 @@
     "dev": "pnpm boot:cek",
     "boot:cek": "cd ./node_modules/@tailor-cms/tce-boot && pnpm start --default-display",
     "build": "pnpm -r run build",
-    "lint": "pnpm -r run lint",
-    "lint:fix": "pnpm -r run lint --fix",
-    "test": "pnpm playwright test --config ./test/playwright.config.ts"
+    "lint": "pnpm -r run lint && eslint .",
+    "lint:fix": "pnpm -r run lint --fix && eslint . --fix",
+    "test": "pnpm playwright test --config ./test/playwright.config.ts",
+    "nuke:dist": "pnpm -r run nuke:dist",
+    "nuke": "pnpm -r run nuke && pnpm dlx del-cli node_modules"
   },
   "bin": {
     "@tailor-cms/tce-template": "bin/index.cjs"

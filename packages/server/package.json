@@ -17,16 +17,19 @@
   ],
   "scripts": {
     "dev": "tsup --watch src --watch ../manifest/dist",
-    "build": "tsup",
-    "lint": "eslint --ext .js,.ts .",
-    "lint:fix": "pnpm lint --fix"
+    "build": "pnpm nuke:dist && tsup",
+    "lint": "eslint .",
+    "lint:fix": "pnpm lint --fix",
+    "nuke": "pnpm dlx del-cli dist node_modules",
+    "nuke:dist": "pnpm dlx del-cli dist",
+    "prepublish": "pnpm build"
   },
   "devDependencies": {
     "@tailor-cms/cek-common": "^1.2.0",
     "@tailor-cms/eslint-config": "1.0.0",
     "tce-manifest": "workspace:*",
-    "tsup": "^8.3.6",
-    "typescript": "^5.7.3"
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
   },
   "tsup": {
     "entry": [

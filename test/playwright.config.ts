@@ -9,7 +9,7 @@ if (!process.env.PREVIEW_RUNTIME_URL) process.env.PREVIEW_RUNTIME_URL = 'http://
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: '.',
+  testDir: ".",
   outputDir: './out',
   timeout: 10 * 60 * 1000,
   expect: { timeout: 30 * 1000 },
