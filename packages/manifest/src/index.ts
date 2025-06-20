@@ -12,7 +12,6 @@ export const name = 'Custom element';
 
 // Function which inits element state (data property on the Content Element
 // entity)
-// e.g. for simple counter component:
 export const initState: DataInitializer = (): ElementData => ({ count: 0 });
 
 // Can be loaded from package.json
