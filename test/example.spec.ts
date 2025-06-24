@@ -8,13 +8,13 @@ test('Renders Edit component', async ({ page }) => {
   const editFrame = page.frameLocator('#editPanel>iframe');
   await expect(editFrame.getByText('Authoring component')).toBeVisible();
   const EDIT_COPY = 'Edit version of the content element';
-  await expect(editFrame.getByText(EDIT_COPY)).toBeVisible();
+  const authoringComponent = editFrame.getByText(EDIT_COPY);
+  await expect(authoringComponent).toBeVisible();
+  await authoringComponent.click();
   await expect(editFrame.getByText('Top toolbar')).toBeVisible();
-  await editFrame.getByText('Persist').nth(0).click();
   const TOP_TOOLBAR_COPY = 'Edit element top toolbar';
   await expect(editFrame.getByText(TOP_TOOLBAR_COPY)).toBeVisible();
   await expect(editFrame.getByText('Side toolbar')).toBeVisible();
-  await editFrame.getByText('Persist').nth(1).click();
   const SIDE_TOOLBAR_COPY = 'Edit element side toolbar';
   await expect(editFrame.getByText(SIDE_TOOLBAR_COPY)).toBeVisible();
 });
