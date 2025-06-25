@@ -28,10 +28,10 @@
   },
   "devDependencies": {
     "@tailor-cms/eslint-config": "1.0.1",
-    "@vitejs/plugin-vue": "^5.2.4",
+    "@vitejs/plugin-vue": "^6.0.0",
     "tce-manifest": "workspace:*",
     "typescript": "^5.8.3",
-    "vite": "^6.3.5",
+    "vite": "^7.0.0",
     "vue-tsc": "^2.2.10"
   }
 }

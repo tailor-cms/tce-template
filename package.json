@@ -45,11 +45,11 @@
     "@playwright/test": "1.53.1",
     "@tailor-cms/eslint-config": "1.0.1",
     "@tailor-cms/tce-boot": "1.2.1",
-    "@types/node": "^24.0.3",
-    "concurrently": "^9.1.2",
+    "@types/node": "^24.0.4",
+    "concurrently": "^9.2.0",
     "dotenv": "^16.5.0",
     "eslint": "^9.29.0",
-    "prettier": "3.5.3",
+    "prettier": "3.6.1",
     "typescript": "^5.8.3"
   },
   "publishConfig": {
