@@ -11,10 +11,14 @@ test('Renders Edit component', async ({ page }) => {
   const authoringComponent = editFrame.getByText(EDIT_COPY);
   await expect(authoringComponent).toBeVisible();
   await authoringComponent.click();
-  await expect(editFrame.getByText('Top toolbar')).toBeVisible();
+  await expect(
+    editFrame.getByText('Top toolbar', { exact: true }),
+  ).toBeVisible();
   const TOP_TOOLBAR_COPY = 'Edit element top toolbar';
   await expect(editFrame.getByText(TOP_TOOLBAR_COPY)).toBeVisible();
-  await expect(editFrame.getByText('Side toolbar')).toBeVisible();
+  await expect(
+    editFrame.getByText('Side toolbar', { exact: true }),
+  ).toBeVisible();
   const SIDE_TOOLBAR_COPY = 'Edit element side toolbar';
   await expect(editFrame.getByText(SIDE_TOOLBAR_COPY)).toBeVisible();
 });
