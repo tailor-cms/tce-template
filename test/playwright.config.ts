@@ -12,8 +12,6 @@ if (!process.env.PREVIEW_RUNTIME_URL)
 export default defineConfig({
   testDir: '.',
   outputDir: './out',
-  timeout: 10 * 60 * 1000,
-  expect: { timeout: 30 * 1000 },
   fullyParallel: false,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 3 : 0,

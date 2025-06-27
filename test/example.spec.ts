@@ -1,50 +1,45 @@
 import { expect, test } from '@playwright/test';
+import { pom } from '@tailor-cms/cek-e2e';
+
+const COPY = {
+  edit: 'Edit version of the content element',
+  display: 'Display version of the content element',
+  topToolbar: 'Edit element top toolbar',
+  sideToolbar: 'Edit element side toolbar',
+};
 
 test.beforeEach(async ({ page }) => {
   await page.goto('/');
+  await page.waitForLoadState('networkidle');
 });
 
 test('Renders Edit component', async ({ page }) => {
-  const editFrame = page.frameLocator('#editPanel>iframe');
-  await expect(editFrame.getByText('Authoring component')).toBeVisible();
-  const EDIT_COPY = 'Edit version of the content element';
-  const authoringComponent = editFrame.getByText(EDIT_COPY);
-  await expect(authoringComponent).toBeVisible();
-  await authoringComponent.click();
-  await expect(
-    editFrame.getByText('Top toolbar', { exact: true }),
-  ).toBeVisible();
-  const TOP_TOOLBAR_COPY = 'Edit element top toolbar';
-  await expect(editFrame.getByText(TOP_TOOLBAR_COPY)).toBeVisible();
-  await expect(
-    editFrame.getByText('Side toolbar', { exact: true }),
-  ).toBeVisible();
-  const SIDE_TOOLBAR_COPY = 'Edit element side toolbar';
-  await expect(editFrame.getByText(SIDE_TOOLBAR_COPY)).toBeVisible();
+  const editPanel = new pom.EditPanel(page);
+  await editPanel.persistFocus();
+  await expect(editPanel.editor).toBeVisible();
+  await expect(editPanel.editor.getByText(COPY.edit)).toBeVisible();
+  await expect(editPanel.topToolbar).toBeVisible();
+  await expect(editPanel.topToolbar.getByText(COPY.topToolbar)).toBeVisible();
+  await expect(editPanel.sideToolbar).toBeVisible();
+  await expect(editPanel.sideToolbar.getByText(COPY.sideToolbar)).toBeVisible();
 });
 
 test('Renders Display component', async ({ page }) => {
-  const displayFrame = page.frameLocator('#displayPanel>iframe');
-  await expect(displayFrame.getByText('End-user component')).toBeVisible();
-  const DISPLAY_COPY = 'Display version of the content element';
-  await expect(displayFrame.getByText(DISPLAY_COPY)).toBeVisible();
+  const displayPanel = new pom.DisplayPanel(page);
+  await expect(displayPanel.editor).toBeVisible();
+  await expect(displayPanel.editor.getByText(COPY.display)).toBeVisible();
 });
 
 test('Renders server state panel', async ({ page }) => {
-  const bottomPanel = page.locator('#panelBottom');
-  const authoringTab = bottomPanel.getByRole('tab', {
-    name: 'Authoring history',
-  });
-  await expect(authoringTab).toBeVisible();
-  const userStateTab = bottomPanel.getByRole('tab', {
-    name: 'End-user state history',
-  });
-  await expect(userStateTab).toBeVisible();
-  await authoringTab.click();
+  const bottomPanel = new pom.BottomPanel(page);
+  await expect(bottomPanel.el).toBeVisible();
+  await bottomPanel.authoringTab.click();
   const properties = ['uid', 'type', 'meta', 'data', 'contentId'];
   for (const prop of properties) {
-    await expect(bottomPanel.getByText(prop)).toBeVisible();
+    await expect(bottomPanel.authoringWindow.getByText(prop)).toBeVisible();
   }
-  await userStateTab.click();
-  await expect(bottomPanel.locator('pre').getByText('state')).toBeVisible();
+  await bottomPanel.userStateTab.click();
+  await expect(
+    bottomPanel.userStateWindow.locator('pre').getByText('state'),
+  ).toBeVisible();
 });
