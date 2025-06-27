@@ -24,11 +24,9 @@
     "nuke:dist": "pnpm dlx del-cli dist",
     "prepublish": "pnpm build"
   },
-  "dependencies": {
-    "@tailor-cms/cek-common": "^1.2.1"
-  },
   "devDependencies": {
-    "@tailor-cms/eslint-config": "1.0.1",
+    "@tailor-cms/cek-common": "^1.2.2",
+    "@tailor-cms/eslint-config": "1.0.2",
     "tsup": "^8.5.0",
     "typescript": "^5.8.3"
   },

@@ -1,4 +1,4 @@
-import * as common from '@tailor-cms/cek-common';
+import type * as common from '@tailor-cms/cek-common';
 
 export type ElementData = common.ElementConfig;
 
