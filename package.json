@@ -24,16 +24,15 @@
     "build": "pnpm -r run build",
     "lint": "pnpm -r run lint && eslint .",
     "lint:fix": "pnpm -r run lint --fix && eslint . --fix",
-    "test": "pnpm playwright test --config ./test/playwright.config.ts",
     "nuke:dist": "pnpm -r run nuke:dist",
-    "nuke": "pnpm -r run nuke && pnpm dlx del-cli node_modules"
+    "nuke": "pnpm -r run nuke && pnpm dlx del-cli node_modules",
+    "test": "pnpm playwright test --config ./test/playwright.config.ts"
   },
   "bin": {
     "@tailor-cms/tce-template": "bin/index.cjs"
   },
   "dependencies": {
     "@npmcli/package-json": "^6.2.0",
-    "@tailor-cms/cek-e2e": "^1.2.2",
     "chalk": "^5.4.1",
     "degit": "^2.8.4",
     "enquirer": "^2.4.1",
@@ -43,6 +42,7 @@
   "devDependencies": {
     "@changesets/cli": "^2.29.5",
     "@playwright/test": "1.53.1",
+    "@tailor-cms/cek-e2e": "^1.2.3",
     "@tailor-cms/eslint-config": "1.0.2",
     "@tailor-cms/tce-boot": "1.2.3",
     "@types/node": "^24.0.4",
