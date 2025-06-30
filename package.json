@@ -44,7 +44,7 @@
     "@changesets/cli": "^2.29.5",
     "@playwright/test": "1.53.1",
     "@tailor-cms/eslint-config": "1.0.2",
-    "@tailor-cms/tce-boot": "1.2.2",
+    "@tailor-cms/tce-boot": "1.2.3",
     "@types/node": "^24.0.4",
     "dotenv": "^16.6.0",
     "eslint": "^9.29.0",
