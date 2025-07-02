@@ -59,7 +59,7 @@ async function runSetup() {
 
 async function cleanup() {
   shell.echo(formatSuccessLog('\n4/4 Cleanup'));
-  await updatePackageJson({ dependencies: {} });
+  await updatePackageJson({ dependencies: {}, bin: {} });
   const deleteBinCommand = shell.exec('rm -rf bin');
   if (deleteBinCommand.code !== SUCCESS_CODE) {
     exitOnError('Cleanup failed');
