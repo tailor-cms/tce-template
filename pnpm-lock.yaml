@@ -34,20 +34,20 @@ importers:
         specifier: 1.53.2
         version: 1.53.2
       '@tailor-cms/cek-e2e':
-        specifier: ^1.3.1
-        version: 1.3.1(@playwright/test@1.53.2)
+        specifier: ^1.3.2
+        version: 1.3.2(@playwright/test@1.53.2)
       '@tailor-cms/eslint-config':
-        specifier: 1.1.1
-        version: 1.1.1(@typescript-eslint/parser@8.36.0(eslint@9.30.1)(typescript@5.8.3))(@typescript-eslint/utils@8.36.0(eslint@9.30.1)(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint@9.30.1)(prettier@3.6.2)(typescript@5.8.3)
+        specifier: 1.1.2
+        version: 1.1.2(@typescript-eslint/parser@8.36.0(eslint@9.30.1)(typescript@5.8.3))(@typescript-eslint/utils@8.36.0(eslint@9.30.1)(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint@9.30.1)(prettier@3.6.2)(typescript@5.8.3)
       '@tailor-cms/tce-boot':
-        specifier: 1.3.1
-        version: 1.3.1(@types/node@24.0.10)
+        specifier: 1.3.2
+        version: 1.3.2(@types/node@24.0.12)
       '@types/node':
-        specifier: ^24.0.10
-        version: 24.0.10
+        specifier: ^24.0.12
+        version: 24.0.12
       dotenv:
-        specifier: ^17.0.1
-        version: 17.0.1
+        specifier: ^17.1.0
+        version: 17.1.0
       eslint:
         specifier: ^9.30.1
         version: 9.30.1
@@ -65,11 +65,11 @@ importers:
         version: 3.5.17(typescript@5.8.3)
     devDependencies:
       '@tailor-cms/eslint-config':
-        specifier: 1.1.1
-        version: 1.1.1(@typescript-eslint/parser@8.36.0(eslint@9.30.1)(typescript@5.8.3))(@typescript-eslint/utils@8.36.0(eslint@9.30.1)(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint@9.30.1)(prettier@3.6.2)(typescript@5.8.3)
+        specifier: 1.1.2
+        version: 1.1.2(@typescript-eslint/parser@8.36.0(eslint@9.30.1)(typescript@5.8.3))(@typescript-eslint/utils@8.36.0(eslint@9.30.1)(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint@9.30.1)(prettier@3.6.2)(typescript@5.8.3)
       '@vitejs/plugin-vue':
         specifier: ^6.0.0
-        version: 6.0.0(vite@7.0.2(@types/node@24.0.10)(sass@1.89.2))(vue@3.5.17(typescript@5.8.3))
+        version: 6.0.0(vite@7.0.3(@types/node@24.0.12)(sass@1.89.2))(vue@3.5.17(typescript@5.8.3))
       tce-manifest:
         specifier: workspace:*
         version: link:../manifest
@@ -77,8 +77,8 @@ importers:
         specifier: ^5.8.3
         version: 5.8.3
       vite:
-        specifier: ^7.0.2
-        version: 7.0.2(@types/node@24.0.10)(sass@1.89.2)
+        specifier: ^7.0.3
+        version: 7.0.3(@types/node@24.0.12)(sass@1.89.2)
       vue-tsc:
         specifier: ^3.0.1
         version: 3.0.1(typescript@5.8.3)
@@ -90,11 +90,11 @@ importers:
         version: 3.5.17(typescript@5.8.3)
     devDependencies:
       '@tailor-cms/eslint-config':
-        specifier: 1.1.1
-        version: 1.1.1(@typescript-eslint/parser@8.36.0(eslint@9.30.1)(typescript@5.8.3))(@typescript-eslint/utils@8.36.0(eslint@9.30.1)(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint@9.30.1)(prettier@3.6.2)(typescript@5.8.3)
+        specifier: 1.1.2
+        version: 1.1.2(@typescript-eslint/parser@8.36.0(eslint@9.30.1)(typescript@5.8.3))(@typescript-eslint/utils@8.36.0(eslint@9.30.1)(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint@9.30.1)(prettier@3.6.2)(typescript@5.8.3)
       '@vitejs/plugin-vue':
         specifier: ^6.0.0
-        version: 6.0.0(vite@7.0.2(@types/node@24.0.10)(sass@1.89.2))(vue@3.5.17(typescript@5.8.3))
+        version: 6.0.0(vite@7.0.3(@types/node@24.0.12)(sass@1.89.2))(vue@3.5.17(typescript@5.8.3))
       tce-manifest:
         specifier: workspace:*
         version: link:../manifest
@@ -102,8 +102,8 @@ importers:
         specifier: ^5.8.3
         version: 5.8.3
       vite:
-        specifier: ^7.0.2
-        version: 7.0.2(@types/node@24.0.10)(sass@1.89.2)
+        specifier: ^7.0.3
+        version: 7.0.3(@types/node@24.0.12)(sass@1.89.2)
       vue-tsc:
         specifier: ^3.0.1
         version: 3.0.1(typescript@5.8.3)
@@ -111,11 +111,11 @@ importers:
   packages/manifest:
     devDependencies:
       '@tailor-cms/cek-common':
-        specifier: ^1.3.1
-        version: 1.3.1
+        specifier: ^1.3.2
+        version: 1.3.2
       '@tailor-cms/eslint-config':
-        specifier: 1.1.1
-        version: 1.1.1(@typescript-eslint/parser@8.36.0(eslint@9.30.1)(typescript@5.8.3))(@typescript-eslint/utils@8.36.0(eslint@9.30.1)(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint@9.30.1)(prettier@3.6.2)(typescript@5.8.3)
+        specifier: 1.1.2
+        version: 1.1.2(@typescript-eslint/parser@8.36.0(eslint@9.30.1)(typescript@5.8.3))(@typescript-eslint/utils@8.36.0(eslint@9.30.1)(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint@9.30.1)(prettier@3.6.2)(typescript@5.8.3)
       tsup:
         specifier: ^8.5.0
         version: 8.5.0(postcss@8.5.6)(typescript@5.8.3)
@@ -126,11 +126,11 @@ importers:
   packages/server:
     devDependencies:
       '@tailor-cms/cek-common':
-        specifier: ^1.3.1
-        version: 1.3.1
+        specifier: ^1.3.2
+        version: 1.3.2
       '@tailor-cms/eslint-config':
-        specifier: 1.1.1
-        version: 1.1.1(@typescript-eslint/parser@8.36.0(eslint@9.30.1)(typescript@5.8.3))(@typescript-eslint/utils@8.36.0(eslint@9.30.1)(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint@9.30.1)(prettier@3.6.2)(typescript@5.8.3)
+        specifier: 1.1.2
+        version: 1.1.2(@typescript-eslint/parser@8.36.0(eslint@9.30.1)(typescript@5.8.3))(@typescript-eslint/utils@8.36.0(eslint@9.30.1)(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint@9.30.1)(prettier@3.6.2)(typescript@5.8.3)
       tce-manifest:
         specifier: workspace:*
         version: link:../manifest
@@ -747,33 +747,33 @@ packages:
     peerDependencies:
       eslint: '>=8.40.0'
 
-  '@tailor-cms/cek-common@1.3.1':
-    resolution: {integrity: sha512-PbHIkj9GtXuGzmSjepqcRrPvYP1ha6bJSu6Bugm6OQ5UjVRVnz4KR2DD2ToR0+FGJTotvFpjbn68Ic/8uNMW3Q==}
+  '@tailor-cms/cek-common@1.3.2':
+    resolution: {integrity: sha512-MMP+kNh9dYeh/ok5Uq4mCSDYtw0JKIWsykaFcq7DSDl4XDnpbOItb+KMNW2VEMh0irWUvPitG82MkJZu0PmjYw==}
 
-  '@tailor-cms/cek-e2e@1.3.1':
-    resolution: {integrity: sha512-MwAbEEkRNC2Q6yQ2Jr2+KLg/2VwjZMn+Uab+4xARWO7zbSodEErOgfdypyKw3kAH8TslSzHoHTQZgrIt5mFYoQ==}
+  '@tailor-cms/cek-e2e@1.3.2':
+    resolution: {integrity: sha512-mmBSqbVpyQP/FFbocmeeWAwD0fME6ArUluMQtC19mv/eN5r4WTeH97nKv0w6UQIjLe4Y33ojqOAZZw87uvMBVA==}
     peerDependencies:
       '@playwright/test': ^1.53.2
 
-  '@tailor-cms/eslint-config@1.1.1':
-    resolution: {integrity: sha512-43HRkBwfznDPDeyLjKrwsGC1xVk22ll/6EXxWW/d7U3DDcctOfbDydCCh/x3VzoNNijoqCI3q+ATA+8IK2Ftzw==}
+  '@tailor-cms/eslint-config@1.1.2':
+    resolution: {integrity: sha512-taama/Pu8hVRFg1K5pVFKoxf/vyW9ke1iYUUZz5rzAdM0qTUVYnQrIFTO7KHxNHM8erQzW/M6epW1GX83iohPw==}
     peerDependencies:
       eslint: '>=9.28.0'
 
-  '@tailor-cms/tce-boot@1.3.1':
-    resolution: {integrity: sha512-QFGJYYizSMeKKSm6yswqfab5QtjwN9Bi7HwtfaDMKHnwc9o/wqrtDMmhnS1ptYlPOoRqihtRYSiPUdPBeigtFQ==}
+  '@tailor-cms/tce-boot@1.3.2':
+    resolution: {integrity: sha512-DmCC7wzBfhcr9/i1YfqqA4V3ztrNsVL/nHvVr9g5q7XQ4OIUFBT/W+7i6VKlw/rtibn5Oq1Z96dI4lSk5fPDGw==}
 
-  '@tailor-cms/tce-display-runtime@1.3.1':
-    resolution: {integrity: sha512-nRIs+XqyWgMKwV/AWeqjoHswnFpuUNL5YDkqL78c/IZFBTIYlsKRS8Ch8/2MoDguR0MKDXo77FtityZo/CjePg==}
+  '@tailor-cms/tce-display-runtime@1.3.2':
+    resolution: {integrity: sha512-QxG2Zwm23LX+mG4mwouJdt/mflnMMLF8nOpWHxdPzlGtmwDiXbnMwR1Ryp6YfxcP3QEI9AaNqh2HX3hJ1arR1g==}
 
-  '@tailor-cms/tce-edit-runtime@1.3.1':
-    resolution: {integrity: sha512-1hL2g+2cadFjtJWidusKvY190MLeXKN6oT3fZaRV4iFtdiBh2TxI8vqqR5mK0HRGJSfUNve+IsieLqekZw44DA==}
+  '@tailor-cms/tce-edit-runtime@1.3.2':
+    resolution: {integrity: sha512-FWJeUoT9s9962D97hfj7DJOkO6UYhOysJPZcTvhY/HvGCfOeFcznUEdqqhQlPkgJ7Km55ckJArqXIvaK2kQxbg==}
 
-  '@tailor-cms/tce-preview-runtime@1.3.1':
-    resolution: {integrity: sha512-NhM6+EsjtFrOFVC0H+HH0DgYKiSRZZOrZ/YXs2O3HGZ2z8Wh7F8GeitSSQZxmRXD8K/Z3qMHeVhrgzC73ldWwQ==}
+  '@tailor-cms/tce-preview-runtime@1.3.2':
+    resolution: {integrity: sha512-pUvrUWJvAw5pT8jN5BQL/0sAB1dW9/vkKwf3wZ7hKHWrBdNt06V2/wzf3Jh0PeEuZ6TJgHgOnUMBR+XERFs1Wg==}
 
-  '@tailor-cms/tce-server-runtime@1.3.1':
-    resolution: {integrity: sha512-Dza+KrL688h46MvvjGzCbBP8iLOTjRBiSl/DFYdAgitkQW+H3Ap/L/acY2OHfD44oEUlIcf0qxUqqDX9TRZobw==}
+  '@tailor-cms/tce-server-runtime@1.3.2':
+    resolution: {integrity: sha512-Mtz3j6DyjBGzZak+vE8gHKB/7MmAHgCrnAP3ijhpYkm8+z7ZeM2cIIjhx7Hkik4+41yQRU+KWpJoh13Rtf5yCg==}
 
   '@tootallnate/once@1.1.2':
     resolution: {integrity: sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==}
@@ -812,8 +812,8 @@ packages:
   '@types/node@12.20.55':
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
 
-  '@types/node@24.0.10':
-    resolution: {integrity: sha512-ENHwaH+JIRTDIEEbDK6QSQntAYGtbvdDXnMXnZaZ6k13Du1dPMmprkEHIL7ok2Wl2aZevetwTAb5S+7yIF+enA==}
+  '@types/node@24.0.12':
+    resolution: {integrity: sha512-LtOrbvDf5ndC9Xi+4QZjVL0woFymF/xSTKZKPgrrl7H7XoeDvnD+E2IclKVDyaK9UM756W/3BXqSU+JEHopA9g==}
 
   '@types/validator@13.15.2':
     resolution: {integrity: sha512-y7pa/oEJJ4iGYBxOpfAKn5b9+xuihvzDVnC/OSvlVnGxVg0pOqmjiMafiJ1KVNQEaPZf9HsEp5icEwGg8uIe5Q==}
@@ -1518,8 +1518,8 @@ packages:
     resolution: {integrity: sha512-35mSku4ZXK0vfCuHEDAwt55dg2jNajHZ1odvF+8SSr82EsZY4QmXfuWso8oEd8zRhVObSN18aM0CjSdoBX7zIw==}
     engines: {node: '>=0.10.0'}
 
-  dotenv@17.0.1:
-    resolution: {integrity: sha512-GLjkduuAL7IMJg/ZnOPm9AnWKJ82mSE2tzXLaJ/6hD6DhwGfZaXG77oB8qbReyiczNxnbxQKyh0OE5mXq0bAHA==}
+  dotenv@17.1.0:
+    resolution: {integrity: sha512-tG9VUTJTuju6GcXgbdsOuRhupE8cb4mRgY5JLRCh4MtGoVo3/gfGUtOMwmProM6d0ba2mCFvv+WrpYJV6qgJXQ==}
     engines: {node: '>=12'}
 
   dottie@2.0.6:
@@ -2779,8 +2779,8 @@ packages:
     resolution: {integrity: sha512-cxN6aIDPz6rm8hbebcP7vrQNhvRcveZoJU72Y7vskh4oIm+BZwBECnx5nTmrlres1Qapvx27Qo1Auukpf8PKXw==}
     engines: {node: '>=18'}
 
-  openai@5.8.2:
-    resolution: {integrity: sha512-8C+nzoHYgyYOXhHGN6r0fcb4SznuEn1R7YZMvlqDbnCuE0FM2mm3T1HiYW6WIcMS/F1Of2up/cSPjLPaWt0X9Q==}
+  openai@5.8.3:
+    resolution: {integrity: sha512-IdotKmquCnpouTRvF9xRXVhMx6K5Sc8zkD6Usf+so+NTQ+qiJ8bLSCd7LBb8b/Rof7uYltlSxJhNp+spphKI4Q==}
     hasBin: true
     peerDependencies:
       ws: ^8.18.0
@@ -3693,48 +3693,8 @@ packages:
       vue: ^3.0.0
       vuetify: ^3.0.0
 
-  vite@7.0.0:
-    resolution: {integrity: sha512-ixXJB1YRgDIw2OszKQS9WxGHKwLdCsbQNkpJN171udl6szi/rIySHL6/Os3s2+oE4P/FLD4dxg4mD7Wust+u5g==}
-    engines: {node: ^20.19.0 || >=22.12.0}
-    hasBin: true
-    peerDependencies:
-      '@types/node': ^20.19.0 || >=22.12.0
-      jiti: '>=1.21.0'
-      less: ^4.0.0
-      lightningcss: ^1.21.0
-      sass: ^1.70.0
-      sass-embedded: ^1.70.0
-      stylus: '>=0.54.8'
-      sugarss: ^5.0.0
-      terser: ^5.16.0
-      tsx: ^4.8.1
-      yaml: ^2.4.2
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      jiti:
-        optional: true
-      less:
-        optional: true
-      lightningcss:
-        optional: true
-      sass:
-        optional: true
-      sass-embedded:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
-        optional: true
-      tsx:
-        optional: true
-      yaml:
-        optional: true
-
-  vite@7.0.2:
-    resolution: {integrity: sha512-hxdyZDY1CM6SNpKI4w4lcUc3Mtkd9ej4ECWVHSMrOdSinVc2zYOAppHeGc/hzmRo3pxM5blMzkuWHOJA/3NiFw==}
+  vite@7.0.3:
+    resolution: {integrity: sha512-y2L5oJZF7bj4c0jgGYgBNSdIu+5HF+m68rn2cQXFbGoShdhV1phX9rbnxy9YXj82aS8MMsCLAAFkRxZeWdldrQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -3802,8 +3762,8 @@ packages:
       typescript:
         optional: true
 
-  vuetify@3.8.12:
-    resolution: {integrity: sha512-XRX/yRel/V5rlas12ovujVCo8RDb/NwICyef/DVYzybqbYz/UGHZd23sN5q1zw0h9jUN8httXI6ytWN7OFugmA==}
+  vuetify@3.9.0:
+    resolution: {integrity: sha512-vjqyHP5gBFH4x0BAjdRAcS3FXY5OfHaKnC6Hhgln8tePZtKc3AUhF7BEJtcrD3l6XwL8gaYx/wMt+UP7X5EZJw==}
     engines: {node: ^12.20 || >=14.13}
     peerDependencies:
       typescript: '>=4.7'
@@ -4510,18 +4470,18 @@ snapshots:
       - supports-color
       - typescript
 
-  '@tailor-cms/cek-common@1.3.1':
+  '@tailor-cms/cek-common@1.3.2':
     dependencies:
       '@lukeed/csprng': 1.1.0
       '@lukeed/uuid': 2.0.1
       ky: 1.8.1
       mitt: 3.0.1
 
-  '@tailor-cms/cek-e2e@1.3.1(@playwright/test@1.53.2)':
+  '@tailor-cms/cek-e2e@1.3.2(@playwright/test@1.53.2)':
     dependencies:
       '@playwright/test': 1.53.2
 
-  '@tailor-cms/eslint-config@1.1.1(@typescript-eslint/parser@8.36.0(eslint@9.30.1)(typescript@5.8.3))(@typescript-eslint/utils@8.36.0(eslint@9.30.1)(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint@9.30.1)(prettier@3.6.2)(typescript@5.8.3)':
+  '@tailor-cms/eslint-config@1.1.2(@typescript-eslint/parser@8.36.0(eslint@9.30.1)(typescript@5.8.3))(@typescript-eslint/utils@8.36.0(eslint@9.30.1)(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint@9.30.1)(prettier@3.6.2)(typescript@5.8.3)':
     dependencies:
       '@eslint/js': 9.30.1
       eslint: 9.30.1
@@ -4544,15 +4504,15 @@ snapshots:
       - supports-color
       - typescript
 
-  '@tailor-cms/tce-boot@1.3.1(@types/node@24.0.10)':
+  '@tailor-cms/tce-boot@1.3.2(@types/node@24.0.12)':
     dependencies:
-      '@tailor-cms/tce-display-runtime': 1.3.1(@types/node@24.0.10)
-      '@tailor-cms/tce-edit-runtime': 1.3.1(@types/node@24.0.10)
-      '@tailor-cms/tce-preview-runtime': 1.3.1(@types/node@24.0.10)
-      '@tailor-cms/tce-server-runtime': 1.3.1(@types/node@24.0.10)
+      '@tailor-cms/tce-display-runtime': 1.3.2(@types/node@24.0.12)
+      '@tailor-cms/tce-edit-runtime': 1.3.2(@types/node@24.0.12)
+      '@tailor-cms/tce-preview-runtime': 1.3.2(@types/node@24.0.12)
+      '@tailor-cms/tce-server-runtime': 1.3.2(@types/node@24.0.12)
       boxen: 8.0.1
       concurrently: 9.2.0
-      dotenv: 17.0.1
+      dotenv: 17.1.0
       fkill: 9.0.0
       has-flag: 5.0.1
       lodash-es: 4.17.21
@@ -4587,23 +4547,23 @@ snapshots:
       - yaml
       - zod
 
-  '@tailor-cms/tce-display-runtime@1.3.1(@types/node@24.0.10)':
+  '@tailor-cms/tce-display-runtime@1.3.2(@types/node@24.0.12)':
     dependencies:
       '@mdi/font': 7.4.47
-      '@tailor-cms/cek-common': 1.3.1
-      '@vitejs/plugin-vue': 6.0.0(vite@7.0.0(@types/node@24.0.10)(sass@1.89.2))(vue@3.5.17(typescript@5.8.3))
+      '@tailor-cms/cek-common': 1.3.2
+      '@vitejs/plugin-vue': 6.0.0(vite@7.0.3(@types/node@24.0.12)(sass@1.89.2))(vue@3.5.17(typescript@5.8.3))
       '@vue/reactivity': 3.5.17
       '@vue/runtime-core': 3.5.17
       '@vue/runtime-dom': 3.5.17
       '@vue/shared': 3.5.17
-      dotenv: 17.0.1
+      dotenv: 17.1.0
       lodash-es: 4.17.21
       sass: 1.89.2
       typescript: 5.8.3
-      vite: 7.0.0(@types/node@24.0.10)(sass@1.89.2)
-      vite-plugin-vuetify: 2.1.1(vite@7.0.0(@types/node@24.0.10)(sass@1.89.2))(vue@3.5.17(typescript@5.8.3))(vuetify@3.8.12)
+      vite: 7.0.3(@types/node@24.0.12)(sass@1.89.2)
+      vite-plugin-vuetify: 2.1.1(vite@7.0.3(@types/node@24.0.12)(sass@1.89.2))(vue@3.5.17(typescript@5.8.3))(vuetify@3.9.0)
       vue: 3.5.17(typescript@5.8.3)
-      vuetify: 3.8.12(typescript@5.8.3)(vite-plugin-vuetify@2.1.1)(vue@3.5.17(typescript@5.8.3))
+      vuetify: 3.9.0(typescript@5.8.3)(vite-plugin-vuetify@2.1.1)(vue@3.5.17(typescript@5.8.3))
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -4618,11 +4578,11 @@ snapshots:
       - webpack-plugin-vuetify
       - yaml
 
-  '@tailor-cms/tce-edit-runtime@1.3.1(@types/node@24.0.10)':
+  '@tailor-cms/tce-edit-runtime@1.3.2(@types/node@24.0.12)':
     dependencies:
       '@mdi/font': 7.4.47
-      '@tailor-cms/cek-common': 1.3.1
-      '@vitejs/plugin-vue': 6.0.0(vite@7.0.0(@types/node@24.0.10)(sass@1.89.2))(vue@3.5.17(typescript@5.8.3))
+      '@tailor-cms/cek-common': 1.3.2
+      '@vitejs/plugin-vue': 6.0.0(vite@7.0.3(@types/node@24.0.12)(sass@1.89.2))(vue@3.5.17(typescript@5.8.3))
       '@vue/reactivity': 3.5.17
       '@vue/runtime-core': 3.5.17
       '@vue/runtime-dom': 3.5.17
@@ -4633,10 +4593,10 @@ snapshots:
       sass: 1.89.2
       typescript: 5.8.3
       uuid: 11.1.0
-      vite: 7.0.0(@types/node@24.0.10)(sass@1.89.2)
-      vite-plugin-vuetify: 2.1.1(vite@7.0.0(@types/node@24.0.10)(sass@1.89.2))(vue@3.5.17(typescript@5.8.3))(vuetify@3.8.12)
+      vite: 7.0.3(@types/node@24.0.12)(sass@1.89.2)
+      vite-plugin-vuetify: 2.1.1(vite@7.0.3(@types/node@24.0.12)(sass@1.89.2))(vue@3.5.17(typescript@5.8.3))(vuetify@3.9.0)
       vue: 3.5.17(typescript@5.8.3)
-      vuetify: 3.8.12(typescript@5.8.3)(vite-plugin-vuetify@2.1.1)(vue@3.5.17(typescript@5.8.3))
+      vuetify: 3.9.0(typescript@5.8.3)(vite-plugin-vuetify@2.1.1)(vue@3.5.17(typescript@5.8.3))
     transitivePeerDependencies:
       - '@types/node'
       - debug
@@ -4652,11 +4612,11 @@ snapshots:
       - webpack-plugin-vuetify
       - yaml
 
-  '@tailor-cms/tce-preview-runtime@1.3.1(@types/node@24.0.10)':
+  '@tailor-cms/tce-preview-runtime@1.3.2(@types/node@24.0.12)':
     dependencies:
       '@mdi/font': 7.4.47
-      '@tailor-cms/cek-common': 1.3.1
-      '@vitejs/plugin-vue': 6.0.0(vite@7.0.0(@types/node@24.0.10)(sass@1.89.2))(vue@3.5.17(typescript@5.8.3))
+      '@tailor-cms/cek-common': 1.3.2
+      '@vitejs/plugin-vue': 6.0.0(vite@7.0.3(@types/node@24.0.12)(sass@1.89.2))(vue@3.5.17(typescript@5.8.3))
       '@vueuse/core': 13.5.0(vue@3.5.17(typescript@5.8.3))
       date-fns: 4.1.0
       lodash-es: 4.17.21
@@ -4664,10 +4624,10 @@ snapshots:
       split.js: 1.6.5
       stringify-object: 5.0.0
       typescript: 5.8.3
-      vite: 7.0.0(@types/node@24.0.10)(sass@1.89.2)
-      vite-plugin-vuetify: 2.1.1(vite@7.0.0(@types/node@24.0.10)(sass@1.89.2))(vue@3.5.17(typescript@5.8.3))(vuetify@3.8.12)
+      vite: 7.0.3(@types/node@24.0.12)(sass@1.89.2)
+      vite-plugin-vuetify: 2.1.1(vite@7.0.3(@types/node@24.0.12)(sass@1.89.2))(vue@3.5.17(typescript@5.8.3))(vuetify@3.9.0)
       vue: 3.5.17(typescript@5.8.3)
-      vuetify: 3.8.12(typescript@5.8.3)(vite-plugin-vuetify@2.1.1)(vue@3.5.17(typescript@5.8.3))
+      vuetify: 3.9.0(typescript@5.8.3)(vite-plugin-vuetify@2.1.1)(vue@3.5.17(typescript@5.8.3))
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -4682,7 +4642,7 @@ snapshots:
       - webpack-plugin-vuetify
       - yaml
 
-  '@tailor-cms/tce-server-runtime@1.3.1(@types/node@24.0.10)':
+  '@tailor-cms/tce-server-runtime@1.3.2(@types/node@24.0.12)':
     dependencies:
       '@lukeed/uuid': 2.0.1
       bluebird: 3.7.2
@@ -4692,10 +4652,10 @@ snapshots:
       lodash-es: 4.17.21
       mkdirp: 3.0.1
       multer: 2.0.1
-      openai: 5.8.2(ws@8.18.3)
+      openai: 5.8.3(ws@8.18.3)
       sequelize: 6.37.7(sqlite3@5.1.7(bluebird@3.7.2))
       sqlite3: 5.1.7(bluebird@3.7.2)
-      ts-node: 10.9.2(@types/node@24.0.10)(typescript@5.8.3)
+      ts-node: 10.9.2(@types/node@24.0.12)(typescript@5.8.3)
       typescript: 5.8.3
       untildify: 5.0.0
       url-join: 5.0.0
@@ -4747,7 +4707,7 @@ snapshots:
 
   '@types/node@12.20.55': {}
 
-  '@types/node@24.0.10':
+  '@types/node@24.0.12':
     dependencies:
       undici-types: 7.8.0
 
@@ -4906,16 +4866,10 @@ snapshots:
   '@unrs/resolver-binding-win32-x64-msvc@1.11.0':
     optional: true
 
-  '@vitejs/plugin-vue@6.0.0(vite@7.0.0(@types/node@24.0.10)(sass@1.89.2))(vue@3.5.17(typescript@5.8.3))':
+  '@vitejs/plugin-vue@6.0.0(vite@7.0.3(@types/node@24.0.12)(sass@1.89.2))(vue@3.5.17(typescript@5.8.3))':
     dependencies:
       '@rolldown/pluginutils': 1.0.0-beta.19
-      vite: 7.0.0(@types/node@24.0.10)(sass@1.89.2)
-      vue: 3.5.17(typescript@5.8.3)
-
-  '@vitejs/plugin-vue@6.0.0(vite@7.0.2(@types/node@24.0.10)(sass@1.89.2))(vue@3.5.17(typescript@5.8.3))':
-    dependencies:
-      '@rolldown/pluginutils': 1.0.0-beta.19
-      vite: 7.0.2(@types/node@24.0.10)(sass@1.89.2)
+      vite: 7.0.3(@types/node@24.0.12)(sass@1.89.2)
       vue: 3.5.17(typescript@5.8.3)
 
   '@volar/language-core@2.4.17':
@@ -5002,11 +4956,11 @@ snapshots:
 
   '@vue/shared@3.5.17': {}
 
-  '@vuetify/loader-shared@2.1.0(vue@3.5.17(typescript@5.8.3))(vuetify@3.8.12)':
+  '@vuetify/loader-shared@2.1.0(vue@3.5.17(typescript@5.8.3))(vuetify@3.9.0)':
     dependencies:
       upath: 2.0.1
       vue: 3.5.17(typescript@5.8.3)
-      vuetify: 3.8.12(typescript@5.8.3)(vite-plugin-vuetify@2.1.1)(vue@3.5.17(typescript@5.8.3))
+      vuetify: 3.9.0(typescript@5.8.3)(vite-plugin-vuetify@2.1.1)(vue@3.5.17(typescript@5.8.3))
 
   '@vueuse/core@13.5.0(vue@3.5.17(typescript@5.8.3))':
     dependencies:
@@ -5515,7 +5469,7 @@ snapshots:
     dependencies:
       esutils: 2.0.3
 
-  dotenv@17.0.1: {}
+  dotenv@17.1.0: {}
 
   dottie@2.0.6: {}
 
@@ -7007,7 +6961,7 @@ snapshots:
       is-inside-container: 1.0.0
       is-wsl: 3.1.0
 
-  openai@5.8.2(ws@8.18.3):
+  openai@5.8.3(ws@8.18.3):
     optionalDependencies:
       ws: 8.18.3
 
@@ -7796,14 +7750,14 @@ snapshots:
 
   ts-interface-checker@0.1.13: {}
 
-  ts-node@10.9.2(@types/node@24.0.10)(typescript@5.8.3):
+  ts-node@10.9.2(@types/node@24.0.12)(typescript@5.8.3):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 24.0.10
+      '@types/node': 24.0.12
       acorn: 8.15.0
       acorn-walk: 8.3.4
       arg: 4.1.3
@@ -7999,18 +7953,18 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite-plugin-vuetify@2.1.1(vite@7.0.0(@types/node@24.0.10)(sass@1.89.2))(vue@3.5.17(typescript@5.8.3))(vuetify@3.8.12):
+  vite-plugin-vuetify@2.1.1(vite@7.0.3(@types/node@24.0.12)(sass@1.89.2))(vue@3.5.17(typescript@5.8.3))(vuetify@3.9.0):
     dependencies:
-      '@vuetify/loader-shared': 2.1.0(vue@3.5.17(typescript@5.8.3))(vuetify@3.8.12)
+      '@vuetify/loader-shared': 2.1.0(vue@3.5.17(typescript@5.8.3))(vuetify@3.9.0)
       debug: 4.4.1
       upath: 2.0.1
-      vite: 7.0.0(@types/node@24.0.10)(sass@1.89.2)
+      vite: 7.0.3(@types/node@24.0.12)(sass@1.89.2)
       vue: 3.5.17(typescript@5.8.3)
-      vuetify: 3.8.12(typescript@5.8.3)(vite-plugin-vuetify@2.1.1)(vue@3.5.17(typescript@5.8.3))
+      vuetify: 3.9.0(typescript@5.8.3)(vite-plugin-vuetify@2.1.1)(vue@3.5.17(typescript@5.8.3))
     transitivePeerDependencies:
       - supports-color
 
-  vite@7.0.0(@types/node@24.0.10)(sass@1.89.2):
+  vite@7.0.3(@types/node@24.0.12)(sass@1.89.2):
     dependencies:
       esbuild: 0.25.6
       fdir: 6.4.6(picomatch@4.0.2)
@@ -8019,20 +7973,7 @@ snapshots:
       rollup: 4.44.2
       tinyglobby: 0.2.14
     optionalDependencies:
-      '@types/node': 24.0.10
-      fsevents: 2.3.3
-      sass: 1.89.2
-
-  vite@7.0.2(@types/node@24.0.10)(sass@1.89.2):
-    dependencies:
-      esbuild: 0.25.6
-      fdir: 6.4.6(picomatch@4.0.2)
-      picomatch: 4.0.2
-      postcss: 8.5.6
-      rollup: 4.44.2
-      tinyglobby: 0.2.14
-    optionalDependencies:
-      '@types/node': 24.0.10
+      '@types/node': 24.0.12
       fsevents: 2.3.3
       sass: 1.89.2
 
@@ -8079,12 +8020,12 @@ snapshots:
     optionalDependencies:
       typescript: 5.8.3
 
-  vuetify@3.8.12(typescript@5.8.3)(vite-plugin-vuetify@2.1.1)(vue@3.5.17(typescript@5.8.3)):
+  vuetify@3.9.0(typescript@5.8.3)(vite-plugin-vuetify@2.1.1)(vue@3.5.17(typescript@5.8.3)):
     dependencies:
       vue: 3.5.17(typescript@5.8.3)
     optionalDependencies:
       typescript: 5.8.3
-      vite-plugin-vuetify: 2.1.1(vite@7.0.0(@types/node@24.0.10)(sass@1.89.2))(vue@3.5.17(typescript@5.8.3))(vuetify@3.8.12)
+      vite-plugin-vuetify: 2.1.1(vite@7.0.3(@types/node@24.0.12)(sass@1.89.2))(vue@3.5.17(typescript@5.8.3))(vuetify@3.9.0)
 
   webidl-conversions@4.0.2: {}
 
@@ -8154,7 +8095,7 @@ snapshots:
 
   wkx@0.5.0:
     dependencies:
-      '@types/node': 24.0.10
+      '@types/node': 24.0.12
 
   word-wrap@1.2.5: {}
 
