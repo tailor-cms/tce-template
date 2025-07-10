@@ -1,4 +1,5 @@
 node_modules/
+.pnpm-store
 /dist/
 
 # OS
@@ -14,6 +15,7 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+nohup.out
 
 # Editor directories and files
 .idea

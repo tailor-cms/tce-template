@@ -16,19 +16,22 @@
   ],
   "scripts": {
     "dev": "vite build --watch",
-    "build": "vue-tsc && vite build",
-    "lint": "eslint --ext .js,.ts,.vue ./src",
-    "lint:fix": "pnpm lint --fix"
+    "build": "pnpm nuke:dist && vue-tsc && vite build",
+    "lint": "eslint ./src",
+    "lint:fix": "pnpm lint --fix",
+    "nuke": "pnpm dlx del-cli dist node_modules",
+    "nuke:dist": "pnpm dlx del-cli dist",
+    "prepublish": "pnpm build"
   },
   "peerDependencies": {
     "vue": "^3.5.13"
   },
   "devDependencies": {
-    "@tailor-cms/eslint-config": "0.0.2",
-    "@vitejs/plugin-vue": "^5.2.1",
+    "@tailor-cms/eslint-config": "1.1.2",
+    "@vitejs/plugin-vue": "^6.0.0",
     "tce-manifest": "workspace:*",
-    "typescript": "^5.7.3",
-    "vite": "^6.1.0",
-    "vue-tsc": "^2.2.0"
+    "typescript": "^5.8.3",
+    "vite": "^7.0.3",
+    "vue-tsc": "^3.0.1"
   }
 }

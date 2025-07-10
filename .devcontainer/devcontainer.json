@@ -1,0 +1,62 @@
+{
+  "name": "Tailor - Content Element",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
+  "features": {
+    "ghcr.io/devcontainers-extra/features/pnpm:2": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "forwardPorts": [8080, 8010, 8020, 8030],
+  "portsAttributes": {
+    "8080": {
+      "label": "Content Element Kit preview",
+      "onAutoForward": "notify"
+    },
+    "8010": {
+      "label": "Edit runtime",
+      "onAutoForward": "silent"
+    },
+    "8020": {
+      "label": "Display runtime",
+      "onAutoForward": "silent"
+    },
+    "8030": {
+      "label": "Server runtime",
+      "onAutoForward": "silent"
+    }
+  },
+  "postCreateCommand": "pnpm install --frozen-lockfile && pnpm build",
+  "postAttachCommand": "/bin/bash .devcontainer/setup.sh && pnpm dev",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.formatOnSave": true,
+        "eslint.enable": true,
+        "prettier.requireConfig": true,
+        "files.exclude": {
+          "**/.pnpm": true,
+          "**/node_modules": true
+        },
+        "workbench.colorTheme": "One Dark Pro",
+        "oneDarkPro.editorFontLigatures": true,
+        "oneDarkPro.bold": true,
+        "oneDarkPro.italic": true,
+        "editor.fontSize": 20,
+        "editor.fontFamily": "'Dank Mono', 'Fira Code', monospace",
+        "editor.fontLigatures": true
+      },
+      "extensions": [
+        "akamud.vscode-theme-onedark",
+        "zhuangtongfa.Material-theme",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "mikestead.dotenv",
+        "sainoba.px-to-rem",
+        "stylelint.vscode-stylelint",
+        "zhuangtongfa.material-theme",
+        "EditorConfig.EditorConfig",
+        "Vue.volar",
+        "GitHub.copilot"
+      ]
+    }
+  }
+}

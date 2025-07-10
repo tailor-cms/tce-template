@@ -7,21 +7,20 @@ const IS_CEK = process.env.CEK_RUNTIME;
 // Don't use in production, use only when IS_CEK=true
 const USER_STATE: any = {};
 
-/* eslint-disable @typescript-eslint/no-unused-vars */
-export function beforeSave(element: Element, services: HookServices) {
+export function beforeSave(element: Element, _services: HookServices) {
   console.log('Before save hook');
   return element;
 }
 
-export function afterSave(element: Element, services: HookServices) {
+export function afterSave(element: Element, _services: HookServices) {
   console.log('After save hook');
   return element;
 }
 
 export function afterLoaded(
   element: Element,
-  services: HookServices,
-  runtime: ServerRuntime,
+  _services: HookServices,
+  _runtime: ServerRuntime,
 ) {
   console.log('After loaded hook');
   return element;
@@ -29,23 +28,21 @@ export function afterLoaded(
 
 export function afterRetrieve(
   element: Element,
-  services: HookServices,
-  runtime: ServerRuntime,
+  _services: HookServices,
+  _runtime: ServerRuntime,
 ) {
   console.log('After retrieve hook');
   return element;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export function beforeDisplay(element: Element, context: any) {
+export function beforeDisplay(_element: Element, context: any) {
   console.log('beforeDisplay hook');
   console.log('beforeDisplay context', context);
   return { ...context, ...USER_STATE };
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function onUserInteraction(
-  element: Element,
+  _element: Element,
   context: any,
   payload: any,
 ): any {

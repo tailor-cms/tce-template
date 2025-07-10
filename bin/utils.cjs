@@ -1,10 +1,10 @@
-const readline = require("node:readline");
+const { Snippet } = require('enquirer');
+const chalk = require('chalk');
+const PackageJson = require('@npmcli/package-json');
+const shell = require('shelljs');
+const validatePackageName = require('validate-npm-package-name');
 
-const { Snippet } = require("enquirer");
-const chalk = require("chalk");
-const PackageJson = require("@npmcli/package-json");
-const shell = require("shelljs");
-const validatePackageName = require("validate-npm-package-name");
+const readline = require('node:readline');
 
 const SUCCESS_CODE = 0;
 const ERROR_CODE = 1;
@@ -30,8 +30,8 @@ const rl = readline.createInterface({
 const prompt = (query) => new Promise((resolve) => rl.question(query, resolve));
 
 const setupSnippet = new Snippet({
-  name: "package.json",
-  message: "Fill out the fields in package.json",
+  name: 'package.json',
+  message: 'Fill out the fields in package.json',
   required: true,
   template: `{
     "description": "\${description}",
@@ -42,28 +42,28 @@ const setupSnippet = new Snippet({
 
 async function getPackageJson() {
   try {
-    const pkgJson = await PackageJson.load("./");
+    const pkgJson = await PackageJson.load('./');
     return pkgJson.content;
   } catch {
-    exitOnError("Error loading package.json");
+    exitOnError('Error loading package.json');
   }
 }
 
-async function updatePackageJson(data, path = "./") {
+async function updatePackageJson(data, path = './') {
   try {
     const pkgJson = await PackageJson.load(path);
     pkgJson.update(data);
     await pkgJson.save();
   } catch (err) {
-    exitOnError("Error updating package.json: " + err.message);
+    exitOnError('Error updating package.json: ' + err.message);
   }
 }
 
 async function getPackageName() {
-  const name = await prompt(chalk.cyan("Enter project name: "));
+  const name = await prompt(chalk.cyan('Enter project name: '));
   if (!validatePackageName(name).validForNewPackages) {
     shell.echo(
-      formatErrorLog("The provided name must be a valid NPM package name.")
+      formatErrorLog('The provided name must be a valid NPM package name.'),
     );
     return getPackageName();
   }
