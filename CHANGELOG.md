@@ -1,5 +1,8 @@
 # Changelog
 
+### v1.1.0 2025-07-14
+- Bumped tce-boot with support for AI generation and devcontainers. Also updated all the dependencies and migrated code to accomodate changes in `tce-boot`
+
 ### v1.0.4 2025-04-30
 - Bumped `tce-boot` with updated logo
 
