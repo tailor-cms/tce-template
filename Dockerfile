@@ -1,7 +1,7 @@
 ARG PNPM_HOME="/root/.local/share/pnpm"
-ARG PNPM_VERSION="9.15.0"
+ARG PNPM_VERSION="10.12.3"
 
-FROM node:22.12.0-alpine3.20
+FROM node:24-alpine
 ARG PNPM_HOME
 ARG PNPM_VERSION
 # github and ssh
