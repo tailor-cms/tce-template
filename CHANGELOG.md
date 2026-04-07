@@ -1,5 +1,69 @@
 # Changelog
 
+### v2.0.0 2026-04-07
+
+#### Breaking Changes
+- Migrated to Vuetify 4 (MD3 typography, updated component API)
+- Build toolchain: tsup replaced with tsdown for manifest & server packages
+- Vite 7 → Vite 8 (Rolldown replaces Rollup, `rollupOptions` → `rolldownOptions`)
+- TypeScript 5 → TypeScript 6 (`rootDir` required in edit/display tsconfigs)
+- `isolatedDeclarations` enabled in manifest & server packages — all exports
+  require explicit type annotations
+- CSS injection via `vite-plugin-lib-inject-css` replaces `intro` hack
+
+#### Features
+- Typed server hook signatures (`ElementHook`, `BeforeDisplayHook`,
+  `OnUserInteractionHook`) replace untyped function declarations
+- `ServerModule<Element>` typed default export for server package
+- `HookMap<Element>` typed hook map export
+- `isEmpty` manifest function for required element validation
+- `procedures` export in server package for RPC support (callable from Edit
+  components via injected `$rpc`)
+- `/// <reference types="vuetify" />` in vite-env.d.ts for global component types
+
+#### Migration instructions
+- Bump dependencies:
+  - `@tailor-cms/tce-boot` → `^2.0.0-beta.2`
+  - `@tailor-cms/cek-e2e` → `^2.0.0-beta.2`
+  - `@tailor-cms/eslint-config` → `^2.0.0-beta.2`
+  - `@tailor-cms/cek-common` → `^2.0.0-beta.2`
+  - `typescript` → `^6.0.2`
+  - `vite` → `^8.0.0`
+  - `vue-tsc` → `^3.2.5`
+  - `@vitejs/plugin-vue` → `^6.0.5`
+- Add new dev dependencies to edit & display packages:
+  - `vuetify` `^4.0.0`
+  - `vite-plugin-lib-inject-css` `^2.2.2`
+- Replace tsup with tsdown in manifest & server:
+  - Replace `tsup` with `tsdown ^0.21.7` in devDependencies
+  - Replace `tsup` config block with `"tsdown": { "target": "node22", "format": ["cjs", "esm"] }`
+  - Update build scripts: `tsup` → `tsdown`
+- Move `@tailor-cms/cek-common` from devDependencies to dependencies in
+  manifest & server packages (required for DTS externalization)
+- Move `tce-manifest` from devDependencies to dependencies in server package
+- Update manifest & server tsconfigs:
+  - Add `isolatedDeclarations: true`, `declaration: true`
+  - Change `moduleResolution` from `"node"` to `"bundler"`
+  - Remove `allowJs`, `esModuleInterop`
+- Update edit & display tsconfigs:
+  - Add `rootDir: "src"` (required by TypeScript 6)
+- Update vite.config.ts in edit & display:
+  - `rollupOptions` → `rolldownOptions`
+  - Remove `intro`, `globals`, `cssCodeSplit`
+  - Add `output: { exports: 'named' }`
+  - Add `libInjectCss()` plugin
+- Update vite-env.d.ts: add `/// <reference types="vuetify" />`
+- Server package:
+  - Convert hook functions to typed arrow functions using `ElementHook<Element>`,
+    `BeforeDisplayHook<Element>`, `OnUserInteractionHook<Element>`
+  - Type hookMap as `HookMap<Element>` and default export as `ServerModule<Element>`
+  - Add `procedures: Record<string, ProcedureHandler>` export
+- Vue components: remove `import { defineProps, defineEmits } from 'vue'`
+  (compiler macros, no import needed)
+- Use `import type` for type-only imports
+
+---
+
 ### v1.1.1 2025-07-14
 - Reverted `chalk` version to one supporting commonjs.
 
