@@ -24,14 +24,16 @@
     "prepublish": "pnpm build"
   },
   "peerDependencies": {
-    "vue": "^3.5.13"
+    "vue": "^3.5.29"
   },
   "devDependencies": {
-    "@tailor-cms/eslint-config": "1.1.2",
-    "@vitejs/plugin-vue": "^6.0.0",
+    "@tailor-cms/eslint-config": "^2.0.0-beta.2",
+    "@vitejs/plugin-vue": "^6.0.5",
     "tce-manifest": "workspace:*",
-    "typescript": "^5.8.3",
-    "vite": "^7.0.3",
-    "vue-tsc": "^3.0.1"
+    "typescript": "^6.0.2",
+    "vite": "^8.0.0",
+    "vite-plugin-lib-inject-css": "^2.2.2",
+    "vue-tsc": "^3.2.5",
+    "vuetify": "^4.0.0"
   }
 }

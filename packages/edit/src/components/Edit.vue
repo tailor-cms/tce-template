@@ -5,8 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-import { defineEmits, defineProps } from 'vue';
-import { Element } from 'tce-manifest';
+import type { Element } from 'tce-manifest';
 
 defineEmits(['save']);
 defineProps<{

@@ -26,7 +26,12 @@ const ui = {
   forceFullWidth: true,
 };
 
-export const mocks = {
+// Function to check if element data is empty (used for required elements)
+export const isEmpty = (_data: ElementData): boolean => false;
+
+export const mocks: {
+  displayContexts: { name: string; data: { state: string } }[];
+} = {
   displayContexts: [
     { name: 'Test preset 1', data: { state: 'I have a value' } },
     { name: 'Test preset 2', data: { state: 'I have a different value' } },
@@ -39,6 +44,7 @@ const manifest: ElementManifest = {
   name,
   ssr: false,
   initState,
+  isEmpty,
   ui,
   mocks,
 };
