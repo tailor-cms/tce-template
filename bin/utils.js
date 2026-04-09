@@ -1,23 +1,23 @@
-const { Snippet } = require('enquirer');
-const chalk = require('chalk');
-const PackageJson = require('@npmcli/package-json');
-const shell = require('shelljs');
-const validatePackageName = require('validate-npm-package-name');
+import chalk from 'chalk';
+import PackageJson from '@npmcli/package-json';
+import shell from 'shelljs';
+import { Snippet } from 'enquirer';
+import validatePackageName from 'validate-npm-package-name';
 
-const readline = require('node:readline');
+import readline from 'node:readline';
 
-const SUCCESS_CODE = 0;
+export const SUCCESS_CODE = 0;
 const ERROR_CODE = 1;
 
-function formatSuccessLog(title) {
+export function formatSuccessLog(title) {
   return chalk.cyan(title);
 }
 
-function formatErrorLog(errorMessage) {
+export function formatErrorLog(errorMessage) {
   return chalk.red(errorMessage);
 }
 
-function exitOnError(errorMessage) {
+export function exitOnError(errorMessage) {
   shell.echo(formatErrorLog(errorMessage));
   shell.exit(ERROR_CODE);
 }
@@ -29,7 +29,7 @@ const rl = readline.createInterface({
 
 const prompt = (query) => new Promise((resolve) => rl.question(query, resolve));
 
-const setupSnippet = new Snippet({
+export const setupSnippet = new Snippet({
   name: 'package.json',
   message: 'Fill out the fields in package.json',
   required: true,
@@ -40,7 +40,7 @@ const setupSnippet = new Snippet({
   }`,
 });
 
-async function getPackageJson() {
+export async function getPackageJson() {
   try {
     const pkgJson = await PackageJson.load('./');
     return pkgJson.content;
@@ -49,7 +49,7 @@ async function getPackageJson() {
   }
 }
 
-async function updatePackageJson(data, path = './') {
+export async function updatePackageJson(data, path = './') {
   try {
     const pkgJson = await PackageJson.load(path);
     pkgJson.update(data);
@@ -59,7 +59,7 @@ async function updatePackageJson(data, path = './') {
   }
 }
 
-async function getPackageName() {
+export async function getPackageName() {
   const name = await prompt(chalk.cyan('Enter project name: '));
   if (!validatePackageName(name).validForNewPackages) {
     shell.echo(
@@ -69,14 +69,3 @@ async function getPackageName() {
   }
   return name;
 }
-
-module.exports = {
-  SUCCESS_CODE,
-  setupSnippet,
-  formatSuccessLog,
-  formatErrorLog,
-  exitOnError,
-  updatePackageJson,
-  getPackageJson,
-  getPackageName,
-};

@@ -27,13 +27,13 @@
     "vue": "^3.5.29"
   },
   "devDependencies": {
-    "@tailor-cms/eslint-config": "^2.0.0-beta.2",
+    "@tailor-cms/eslint-config": "2.0.0-beta.3",
     "@vitejs/plugin-vue": "^6.0.5",
     "tce-manifest": "workspace:*",
     "typescript": "^6.0.2",
-    "vite": "^8.0.0",
+    "vite": "^8.0.8",
     "vite-plugin-lib-inject-css": "^2.2.2",
-    "vue-tsc": "^3.2.5",
-    "vuetify": "^4.0.0"
+    "vue-tsc": "^3.2.6",
+    "vuetify": "^4.0.5"
   }
 }

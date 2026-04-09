@@ -1,6 +1,6 @@
 # Changelog
 
-### v2.0.0 2026-04-07
+### v2.0.0 2026-04-09
 
 #### Breaking Changes
 - Migrated to Vuetify 4 (MD3 typography, updated component API)
@@ -10,6 +10,8 @@
 - `isolatedDeclarations` enabled in manifest & server packages — all exports
   require explicit type annotations
 - CSS injection via `vite-plugin-lib-inject-css` replaces `intro` hack
+- Scaffolding CLI (`bin/`) converted from CommonJS to ESM; `chalk` bumped
+  4 → 5 (reverses the workaround from v1.1.1)
 
 #### Features
 - Typed server hook signatures (`ElementHook`, `BeforeDisplayHook`,
@@ -22,18 +24,11 @@
 - `/// <reference types="vuetify" />` in vite-env.d.ts for global component types
 
 #### Migration instructions
-- Bump dependencies:
-  - `@tailor-cms/tce-boot` → `^2.0.0-beta.2`
-  - `@tailor-cms/cek-e2e` → `^2.0.0-beta.2`
-  - `@tailor-cms/eslint-config` → `^2.0.0-beta.2`
-  - `@tailor-cms/cek-common` → `^2.0.0-beta.2`
-  - `typescript` → `^6.0.2`
-  - `vite` → `^8.0.0`
-  - `vue-tsc` → `^3.2.5`
-  - `@vitejs/plugin-vue` → `^6.0.5`
-- Add new dev dependencies to edit & display packages:
-  - `vuetify` `^4.0.0`
-  - `vite-plugin-lib-inject-css` `^2.2.2`
+- Bump to the latest `@tailor-cms/*` 2.0 packages and align TypeScript, Vite,
+  Vuetify, and related toolchain versions — see [package.json](package.json)
+  and the subpackage manifests for target versions
+- Add `vuetify` and `vite-plugin-lib-inject-css` as dev dependencies in edit &
+  display packages
 - Replace tsup with tsdown in manifest & server:
   - Replace `tsup` with `tsdown ^0.21.7` in devDependencies
   - Replace `tsup` config block with `"tsdown": { "target": "node22", "format": ["cjs", "esm"] }`

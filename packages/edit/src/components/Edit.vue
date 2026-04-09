@@ -5,14 +5,19 @@
 </template>
 
 <script lang="ts" setup>
-import type { Element } from 'tce-manifest';
+import type { Element, ElementData } from 'tce-manifest';
 
-defineEmits(['save']);
 defineProps<{
   element: Element;
   isDragged: boolean;
   isReadonly: boolean;
   isFocused: boolean;
+  references?: Record<string, Partial<Element>[]>;
+}>();
+
+defineEmits<{
+  save: [data: ElementData];
+  link: [key?: string];
 }>();
 </script>
 
