@@ -27,7 +27,8 @@
     "vue": "^3.5.29"
   },
   "devDependencies": {
-    "@tailor-cms/eslint-config": "2.0.0-beta.3",
+    "@tailor-cms/cek-common": "2.0.0-beta.11",
+    "@tailor-cms/eslint-config": "2.0.0-beta.11",
     "@vitejs/plugin-vue": "^6.0.5",
     "tce-manifest": "workspace:*",
     "typescript": "^6.0.2",

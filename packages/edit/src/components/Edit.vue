@@ -5,6 +5,7 @@
 </template>
 
 <script lang="ts" setup>
+import type { ElementReferences } from '@tailor-cms/cek-common';
 import type { Element, ElementData } from 'tce-manifest';
 
 defineProps<{
@@ -12,7 +13,7 @@ defineProps<{
   isDragged: boolean;
   isReadonly: boolean;
   isFocused: boolean;
-  references?: Record<string, Partial<Element>[]>;
+  references?: ElementReferences;
 }>();
 
 defineEmits<{

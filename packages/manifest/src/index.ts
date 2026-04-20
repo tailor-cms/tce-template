@@ -1,3 +1,5 @@
+import type { ElementMocks } from '@tailor-cms/cek-common';
+
 import type {
   DataInitializer,
   ElementData,
@@ -29,10 +31,7 @@ const ui = {
 // Function to check if element data is empty (used for required elements)
 export const isEmpty = (_data: ElementData): boolean => false;
 
-export const mocks: {
-  displayContexts: { name: string; data: { state: string } }[];
-  referencesData?: Record<string, Record<string, any>[]>;
-} = {
+export const mocks: ElementMocks = {
   displayContexts: [
     { name: 'Test preset 1', data: { state: 'I have a value' } },
     { name: 'Test preset 2', data: { state: 'I have a different value' } },

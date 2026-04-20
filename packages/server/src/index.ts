@@ -1,4 +1,3 @@
-import { initState, mocks, type } from 'tce-manifest';
 import type {
   BeforeDisplayHook,
   ElementHook,
@@ -7,6 +6,7 @@ import type {
   ProcedureHandler,
   ServerModule,
 } from '@tailor-cms/cek-common';
+import { initState, mocks, type } from 'tce-manifest';
 import type { Element } from 'tce-manifest';
 
 // Detect if hooks are running in CEK (used for mocking end-system runtime)
@@ -24,17 +24,28 @@ export const afterSave: ElementHook<Element> = (element) => {
   return element;
 };
 
-export const afterLoaded: ElementHook<Element> = (element, _services, runtime) => {
+export const afterLoaded: ElementHook<Element> = (
+  element,
+  _services,
+  runtime,
+) => {
   console.log('After loaded hook', runtime);
   return element;
 };
 
-export const afterRetrieve: ElementHook<Element> = (element, _services, runtime) => {
+export const afterRetrieve: ElementHook<Element> = (
+  element,
+  _services,
+  runtime,
+) => {
   console.log('After retrieve hook', runtime);
   return element;
 };
 
-export const beforeDisplay: BeforeDisplayHook<Element> = (_element, context) => {
+export const beforeDisplay: BeforeDisplayHook<Element> = (
+  _element,
+  context,
+) => {
   console.log('beforeDisplay hook');
   console.log('beforeDisplay context', context);
   return { ...context, ...USER_STATE };
