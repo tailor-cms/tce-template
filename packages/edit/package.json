@@ -36,5 +36,8 @@
     "vite-plugin-lib-inject-css": "^2.2.2",
     "vue-tsc": "^3.2.7",
     "vuetify": "^4.0.5"
+  },
+  "engines": {
+    "node": ">=24"
   }
 }
