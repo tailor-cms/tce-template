@@ -5,8 +5,8 @@
 </template>
 
 <script lang="ts" setup>
-import type { ElementReferences } from '@tailor-cms/cek-common';
 import type { Element, ElementData } from 'tce-manifest';
+import type { ElementReferences } from '@tailor-cms/cek-common';
 
 defineProps<{
   element: Element;
