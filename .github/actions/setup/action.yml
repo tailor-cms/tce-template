@@ -1,4 +1,5 @@
 name: Setup pnpm and install cache
+description: Install pnpm, Node, workspace dependencies, and Playwright browsers
 runs:
   using: composite
   steps:
