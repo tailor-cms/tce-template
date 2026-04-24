@@ -3,15 +3,16 @@
     "target": "es2020",
     "module": "esnext",
     "strict": false,
-    "esModuleInterop": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "skipLibCheck": true,
     "noUnusedLocals": true,
     "noImplicitAny": true,
-    "allowJs": true,
+    "isolatedDeclarations": true,
+    "declaration": true,
     "noEmit": true,
     "outDir": "dist",
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "types": ["node"]
   },
   "include": ["src/**/*.ts"]
 }

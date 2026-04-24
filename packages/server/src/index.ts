@@ -1,4 +1,11 @@
-import type { HookServices, ServerRuntime } from '@tailor-cms/cek-common';
+import type {
+  BeforeDisplayHook,
+  ElementHook,
+  HookMap,
+  OnUserInteractionHook,
+  ProcedureHandler,
+  ServerModule,
+} from '@tailor-cms/cek-common';
 import { initState, mocks, type } from 'tce-manifest';
 import type { Element } from 'tce-manifest';
 
@@ -7,45 +14,48 @@ const IS_CEK = process.env.CEK_RUNTIME;
 // Don't use in production, use only when IS_CEK=true
 const USER_STATE: any = {};
 
-export function beforeSave(element: Element, _services: HookServices) {
+export const beforeSave: ElementHook<Element> = (element) => {
   console.log('Before save hook');
   return element;
-}
+};
 
-export function afterSave(element: Element, _services: HookServices) {
+export const afterSave: ElementHook<Element> = (element) => {
   console.log('After save hook');
   return element;
-}
+};
 
-export function afterLoaded(
-  element: Element,
-  _services: HookServices,
-  _runtime: ServerRuntime,
-) {
-  console.log('After loaded hook');
+export const afterLoaded: ElementHook<Element> = (
+  element,
+  _services,
+  runtime,
+) => {
+  console.log('After loaded hook', runtime);
   return element;
-}
+};
 
-export function afterRetrieve(
-  element: Element,
-  _services: HookServices,
-  _runtime: ServerRuntime,
-) {
-  console.log('After retrieve hook');
+export const afterRetrieve: ElementHook<Element> = (
+  element,
+  _services,
+  runtime,
+) => {
+  console.log('After retrieve hook', runtime);
   return element;
-}
+};
 
-export function beforeDisplay(_element: Element, context: any) {
+export const beforeDisplay: BeforeDisplayHook<Element> = (
+  _element,
+  context,
+) => {
   console.log('beforeDisplay hook');
   console.log('beforeDisplay context', context);
   return { ...context, ...USER_STATE };
-}
+};
 
-export function onUserInteraction(
-  _element: Element,
-  context: any,
-  payload: any,
-): any {
+export const onUserInteraction: OnUserInteractionHook<Element> = (
+  _element,
+  context,
+  payload,
+) => {
   console.log('onUserInteraction', context, payload);
   // Simulate user state update within CEK
   if (IS_CEK) {
@@ -58,9 +68,19 @@ export function onUserInteraction(
   // Can have arbitrary return value (interpreted by target system)
   // FE is updated if updateDisplayState is true
   return { updateDisplayState: true };
-}
+};
 
-export const hookMap = new Map(
+// Server-side procedures callable from Edit components via the injected $rpc.
+// Example:
+//   myProcedure: async (services, payload) => {
+//     const key = `exports/${payload.uid}.json`;
+//     await services.storage.saveFile(key, JSON.stringify(payload.data, null, 2));
+//     const url = await services.storage.getFileUrl(key);
+//     return { url };
+//   },
+export const procedures: Record<string, ProcedureHandler> = {};
+
+export const hookMap: HookMap<Element> = new Map(
   Object.entries({
     beforeSave,
     afterSave,
@@ -71,9 +91,10 @@ export const hookMap = new Map(
   }),
 );
 
-export default {
+const serverModule: ServerModule<Element> = {
   type,
   hookMap,
+  procedures,
   initState,
   beforeSave,
   afterSave,
@@ -84,4 +105,5 @@ export default {
   mocks,
 };
 
+export default serverModule;
 export { type, initState, mocks };

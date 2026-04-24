@@ -1,17 +1,17 @@
 #! /usr/bin/env node
-const chalk = require('chalk');
-const degit = require('degit');
-const shell = require('shelljs');
+import chalk from 'chalk';
+import degit from 'degit';
+import shell from 'shelljs';
 
-const {
-  setupSnippet,
+import {
   exitOnError,
   formatSuccessLog,
-  updatePackageJson,
   getPackageJson,
   getPackageName,
+  setupSnippet,
   SUCCESS_CODE,
-} = require('./utils.cjs');
+  updatePackageJson,
+} from './utils.js';
 
 function validateEnvironment() {
   ['git', 'node', 'pnpm'].forEach((prerequisite) => {

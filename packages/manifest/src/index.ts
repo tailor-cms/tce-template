@@ -1,3 +1,5 @@
+import type { ElementMocks } from '@tailor-cms/cek-common';
+
 import type {
   DataInitializer,
   ElementData,
@@ -12,7 +14,7 @@ export const name = 'Custom element';
 
 // Function which inits element state (data property on the Content Element
 // entity)
-export const initState: DataInitializer = (): ElementData => ({});
+export const initState: DataInitializer = (_config): ElementData => ({});
 
 // Can be loaded from package.json
 export const version = '1.0';
@@ -26,11 +28,17 @@ const ui = {
   forceFullWidth: true,
 };
 
-export const mocks = {
+// Function to check if element data is empty (used for required elements)
+export const isEmpty = (_data: ElementData): boolean => false;
+
+export const mocks: ElementMocks = {
   displayContexts: [
     { name: 'Test preset 1', data: { state: 'I have a value' } },
     { name: 'Test preset 2', data: { state: 'I have a different value' } },
   ],
+  referencesData: {
+    linked: [{ title: 'Mock linked element' }],
+  },
 };
 
 const manifest: ElementManifest = {
@@ -39,6 +47,7 @@ const manifest: ElementManifest = {
   name,
   ssr: false,
   initState,
+  isEmpty,
   ui,
   mocks,
 };

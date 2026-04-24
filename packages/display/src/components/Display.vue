@@ -7,10 +7,10 @@
 </template>
 
 <script setup lang="ts">
-import { Element } from 'tce-manifest';
+import type { Element } from 'tce-manifest';
 
 defineProps<{ element: Element; userState: any }>();
-defineEmits(['interaction']);
+defineEmits<{ interaction: [data: any] }>();
 </script>
 
 <style scoped>

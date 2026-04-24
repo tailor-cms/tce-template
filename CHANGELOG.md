@@ -1,5 +1,130 @@
 # Changelog
 
+### v2.0.0 2026-04-09
+
+#### Breaking Changes
+- Migrated to Vuetify 4 (MD3 typography, updated component API)
+- Build toolchain: tsup replaced with tsdown for manifest & server packages
+- Vite 7 → Vite 8 (Rolldown replaces Rollup, `rollupOptions` → `rolldownOptions`)
+- TypeScript 5 → TypeScript 6 (`rootDir` required in edit/display tsconfigs)
+- `isolatedDeclarations` enabled in manifest & server packages — all exports
+  require explicit type annotations
+- CSS injection via `vite-plugin-lib-inject-css` replaces `intro` hack
+- Storage API: `$storageService.upload(file: File)` replaces the `FormData`
+  signature; `createUploadForm` helper and `UploadFormData` type removed
+- Asset components: `AssetInput` and `ElementPlaceholder` from
+  `@tailor-cms/core-components` replaced by globally registered
+  `TailorFileInput` and `TailorElementPlaceholder`
+- Question elements (`ui.isQuestion: true`): edit and display runtimes now
+  auto-wrap question components in `QuestionCard` / `QuestionForm` (formerly
+  `QuestionContainer`). Elements must stop rendering Save/Cancel buttons,
+  Submit/Retry buttons, hint/feedback inputs or rendering, and `VForm`
+  wrapping. Edit now emits `@update` with partial data (replaces `@save`);
+  Display emits `user-input` reactively on value change (replaces
+  `interaction` on submit)
+- Scaffolding CLI (`bin/`) converted from CommonJS to ESM; `chalk` bumped
+  4 → 5 (reverses the workaround from v1.1.1)
+
+#### Features
+- Typed server hook signatures (`ElementHook`, `BeforeDisplayHook`,
+  `OnUserInteractionHook`) replace untyped function declarations
+- `ServerModule<Element>` typed default export for server package
+- `HookMap<Element>` typed hook map export
+- `isEmpty` manifest function for required element validation
+- `procedures` export in server package for RPC support (callable from Edit
+  components via injected `$rpc`)
+- `TailorFileInput` and `TailorElementPlaceholder` global components
+  (no import needed)
+- Element linking: `@link` event, `references` prop (`ElementReferences`),
+  and `mocks.referencesData` for the CEK link dialog
+- `mocks.displayContexts` with canonical `ElementMocks` typing for previewing
+  different delivery states
+- `initState` receives an optional `InitConfig` param (e.g. `config.isGradable`
+  to conditionally include grading fields)
+- Question autosave toggle (Settings panel) and optional `showFeedback`
+  manifest field (defaults to `true`) to hide the feedback section
+- Typed `defineEmits` with tuple syntax recommended for event payloads
+- `/// <reference types="vuetify" />` in `vite-env.d.ts` for global component types
+
+#### Migration instructions
+- Bump to the latest `@tailor-cms/*` 2.0 packages and align TypeScript, Vite,
+  Vuetify, and related toolchain versions — see [package.json](package.json)
+  and the subpackage manifests for target versions
+- Add `vuetify` and `vite-plugin-lib-inject-css` as dev dependencies in edit &
+  display packages
+- Replace tsup with tsdown in manifest & server:
+  - Replace `tsup` with `tsdown ^0.21.7` in devDependencies
+  - Replace `tsup` config block with `"tsdown": { "target": "node22", "format": ["cjs", "esm"] }`
+  - Update build scripts: `tsup` → `tsdown`
+- Move `@tailor-cms/cek-common` from devDependencies to dependencies in
+  manifest & server packages (required for DTS externalization)
+- Move `tce-manifest` from devDependencies to dependencies in server package
+- Update manifest & server tsconfigs:
+  - Add `isolatedDeclarations: true`, `declaration: true`
+  - Change `moduleResolution` from `"node"` to `"bundler"`
+  - Remove `allowJs`, `esModuleInterop`
+- Update edit & display tsconfigs:
+  - Add `rootDir: "src"` (required by TypeScript 6)
+- Update vite.config.ts in edit & display:
+  - `rollupOptions` → `rolldownOptions`
+  - Remove `intro`, `globals`, `cssCodeSplit`
+  - Add `output: { exports: 'named' }`
+  - Add `libInjectCss()` plugin
+- Update vite-env.d.ts: add `/// <reference types="vuetify" />`
+- Server package:
+  - Convert hook functions to typed arrow functions using `ElementHook<Element>`,
+    `BeforeDisplayHook<Element>`, `OnUserInteractionHook<Element>`
+  - Type hookMap as `HookMap<Element>` and default export as `ServerModule<Element>`
+  - Add `procedures: Record<string, ProcedureHandler>` export (empty if unused)
+- Vue components:
+  - Remove `import { defineProps, defineEmits } from 'vue'` (compiler macros)
+  - Use `import type` for type-only imports
+  - Type `defineEmits` with tuple syntax (e.g.
+    `defineEmits<{ save: [data: ElementData] }>()`) for compile-time payload
+    checks
+- Vuetify 4 template updates:
+  - Typography classes renamed: `.title` → `.text-h5`, `.subtitle-1` →
+    `.text-subtitle-1`, `.body-1` → `.text-body-1`, `.caption` → `.text-caption`
+  - Component API: `outlined` / `filled` props on `VTextField` / `VSelect` /
+    `VTextarea` replaced by `variant="outlined"` / `variant="filled"`;
+    `VSwitch` value handling and density props updated — check each
+    component against the Vuetify 4 migration guide
+- Asset components:
+  - Replace `AssetInput` with `TailorFileInput` (globally registered, no
+    import). API differences: `extensions` → `allowedExtensions`
+    (dot-prefixed), `url` → `fileKey`, single `@input` split into `@upload` /
+    `@input` / `@delete`
+  - Replace `ElementPlaceholder` with `TailorElementPlaceholder`
+  - Update `$storageService.upload` callers to pass a `File` directly; remove
+    `createUploadForm` usages and `UploadFormData` imports
+  - Drop `@tailor-cms/core-components` if these were its only usages
+- Manifest:
+  - Type `mocks` against `ElementMocks` from `@tailor-cms/cek-common`
+    (`export const mocks: ElementMocks = { ... }`) — not `as const` and not
+    unannotated, so typos surface at the use site
+- Question elements (`ui.isQuestion: true`) — remove manual wrapping since
+  the runtime auto-wraps in `QuestionCard` / `QuestionForm`:
+  - Edit: emit `@update` with partial data instead of `@save`; drop
+    Save/Cancel buttons, `VForm` wrapping, and hint/feedback inputs
+  - Display: emit `user-input` reactively on value change instead of
+    `interaction` on submit; drop Submit/Retry buttons, `VForm` wrapping, and
+    hint/feedback rendering
+  - Delete any `.question-container` / `.hint-container` / `.feedback-container`
+    nodes your element used to render — the wrapper owns them
+  - Optional: use the `config.isGradable` arg in `initState(config?)` to
+    conditionally include grading fields (e.g. `correct`)
+  - Optional: set `showFeedback: false` in the manifest for question types
+    that don't support per-answer feedback
+- Optional — add element linking if the element references other elements:
+  - Emit `@link(key?)` from the Edit component to open the element picker;
+    receive linked elements via the `references` prop (`ElementReferences`).
+    `element.refs` stores lightweight identifiers
+  - Provide mock data for the CEK link dialog via `mocks.referencesData`
+- Refresh the package README to the canonical template format (see the xt
+  example elements `counter` and `question` as reference)
+
+---
+
 ### v1.1.1 2025-07-14
 - Reverted `chalk` version to one supporting commonjs.
 

@@ -5,15 +5,20 @@
 </template>
 
 <script lang="ts" setup>
-import { defineEmits, defineProps } from 'vue';
-import { Element } from 'tce-manifest';
+import type { Element, ElementData } from 'tce-manifest';
+import type { ElementReferences } from '@tailor-cms/cek-common';
 
-defineEmits(['save']);
 defineProps<{
   element: Element;
   isDragged: boolean;
   isReadonly: boolean;
   isFocused: boolean;
+  references?: ElementReferences;
+}>();
+
+defineEmits<{
+  save: [data: ElementData];
+  link: [key?: string];
 }>();
 </script>
 

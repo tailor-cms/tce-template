@@ -5,10 +5,10 @@
 </template>
 
 <script setup lang="ts">
-import { defineEmits, defineProps } from 'vue';
+import type { Element, ElementData } from 'tce-manifest';
 
 defineProps<{ element: Element }>();
-defineEmits(['save']);
+defineEmits<{ save: [data: ElementData] }>();
 </script>
 
 <style scoped></style>
