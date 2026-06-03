@@ -1,10 +1,12 @@
 import chalk from 'chalk';
+import enquirer from 'enquirer';
 import PackageJson from '@npmcli/package-json';
 import shell from 'shelljs';
-import { Snippet } from 'enquirer';
 import validatePackageName from 'validate-npm-package-name';
 
 import readline from 'node:readline';
+
+const { Snippet } = enquirer;
 
 export const SUCCESS_CODE = 0;
 const ERROR_CODE = 1;
