@@ -10,7 +10,7 @@
     }
   },
   "main": "./dist/index.cjs",
-  "types": "./types/index.d.ts",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -27,8 +27,8 @@
     "vue": "^3.5.29"
   },
   "devDependencies": {
-    "@tailor-cms/cek-common": "2.0.1",
-    "@tailor-cms/eslint-config": "2.0.1",
+    "@tailor-cms/cek-common": "2.1.0",
+    "@tailor-cms/eslint-config": "2.1.0",
     "@vitejs/plugin-vue": "^6.0.6",
     "tce-manifest": "workspace:*",
     "typescript": "^6.0.3",
