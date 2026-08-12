@@ -3,11 +3,11 @@ description: Install pnpm, Node, workspace dependencies, and Playwright browsers
 runs:
   using: composite
   steps:
-  - uses: pnpm/action-setup@v4
+  - uses: pnpm/action-setup@v6
   - name: Setup node to enable caching
-    uses: actions/setup-node@v4
+    uses: actions/setup-node@v7
     with:
-      node-version: 24
+      node-version: 26
       cache: 'pnpm'
       cache-dependency-path: './pnpm-lock.yaml'
   - name: Install dependencies
