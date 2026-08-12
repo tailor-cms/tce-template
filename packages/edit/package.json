@@ -10,7 +10,7 @@
     }
   },
   "main": "./dist/index.cjs",
-  "types": "./types/index.d.ts",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -27,17 +27,17 @@
     "vue": "^3.5.29"
   },
   "devDependencies": {
-    "@tailor-cms/cek-common": "2.0.1",
-    "@tailor-cms/eslint-config": "2.0.1",
-    "@vitejs/plugin-vue": "^6.0.6",
+    "@tailor-cms/cek-common": "2.1.0",
+    "@tailor-cms/eslint-config": "2.1.0",
+    "@vitejs/plugin-vue": "^6.0.8",
     "tce-manifest": "workspace:*",
     "typescript": "^6.0.3",
-    "vite": "^8.0.10",
+    "vite": "^8.2.1",
     "vite-plugin-lib-inject-css": "^2.2.2",
-    "vue-tsc": "^3.2.7",
-    "vuetify": "^4.0.6"
+    "vue-tsc": "^3.3.9",
+    "vuetify": "^4.1.8"
   },
   "engines": {
-    "node": ">=24"
+    "node": ">=26"
   }
 }
