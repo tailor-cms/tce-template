@@ -1,22 +1,13 @@
 {
   "name": "@tailor-cms/tce-template",
   "description": "Content element template",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "author": "Studion <info@gostudion.com>",
   "type": "module",
   "exports": {
-    "./edit": {
-      "import": "./packages/edit/dist/index.js",
-      "require": "./packages/edit/dist/index.cjs"
-    },
-    "./display": {
-      "import": "./packages/display/dist/index.js",
-      "require": "./packages/display/dist/index.cjs"
-    },
-    "./server": {
-      "import": "./packages/server/dist/index.js",
-      "require": "./packages/server/dist/index.cjs"
-    }
+    "./edit": "./packages/edit/dist/index.js",
+    "./display": "./packages/display/dist/index.js",
+    "./server": "./packages/server/dist/index.js"
   },
   "scripts": {
     "dev": "pnpm boot:cek",
@@ -33,22 +24,22 @@
   },
   "dependencies": {
     "@npmcli/package-json": "^8.0.0",
-    "chalk": "^6.0.0",
-    "degit": "^3.6.6",
+    "chalk": "^6.0.1",
+    "degit": "^3.10.1",
     "enquirer": "^2.4.1",
     "shelljs": "^0.10.0",
     "validate-npm-package-name": "^8.0.0"
   },
   "devDependencies": {
-    "@changesets/cli": "^3.0.0",
-    "@playwright/test": "^1.62.1",
-    "@tailor-cms/cek-e2e": "2.1.0",
-    "@tailor-cms/eslint-config": "2.1.0",
-    "@tailor-cms/tce-boot": "2.1.0",
-    "@types/node": "^26.2.0",
-    "dotenv": "^17.4.2",
-    "eslint": "^9.39.5",
-    "prettier": "^3.9.6",
+    "@changesets/cli": "^3.0.3",
+    "@playwright/test": "^1.64.1",
+    "@tailor-cms/cek-e2e": "3.0.5",
+    "@tailor-cms/eslint-config": "3.0.5",
+    "@tailor-cms/tce-boot": "3.0.5",
+    "@types/node": "^26.6.5",
+    "dotenv": "^18.0.9",
+    "eslint": "^10.13.0",
+    "prettier": "^3.9.10",
     "typescript": "^6.0.3"
   },
   "publishConfig": {

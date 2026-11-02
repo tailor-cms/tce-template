@@ -1,5 +1,52 @@
 # Changelog
 
+### v3.0.0 2026-11-02
+
+#### Breaking Changes
+- ESM-only output: CommonJS builds and `require` export conditions removed
+  from the root package and all subpackages
+- Manifest & server packages emit `.js` / `.d.ts` instead of `.mjs` / `.d.mts`
+- ESLint 9 → ESLint 10 (required by `@tailor-cms/eslint-config` 3.x)
+
+#### Changes
+- Bumped `@tailor-cms/*` CEK packages to 3.0.5
+- Moved `@tailor-cms/cek-common` from devDependencies to dependencies in the
+  edit package
+- Bumped Vite, Vuetify, Vue, tsdown, Playwright, dotenv and related toolchain
+  versions
+
+#### Migration instructions
+- Bump to the latest `@tailor-cms/*` 3.0 packages and align toolchain
+  versions — see [package.json](package.json) and the subpackage manifests
+  for target versions; bump `eslint` to `^10`
+- Root `package.json`: replace each `exports` condition object with a plain
+  path (e.g. `"./edit": "./packages/edit/dist/index.js"`)
+- Manifest & server packages:
+  - Set `exports` to
+    `{ ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } }`
+  - Remove `main`; set `types` to `./dist/index.d.ts`
+  - Replace the `tsdown` config block with
+    `{ "target": "node26", "fixedExtension": false }`
+- Edit & display packages:
+  - Set `exports` to `{ ".": "./dist/index.js" }` and remove `main`
+  - In `vite.config.ts`, set `lib.formats` to `['es']` and drop `lib.name`
+- Edit package: move `@tailor-cms/cek-common` to `dependencies`
+- Consumers loading the element via `require()` must switch to `import`
+
+### v2.1.0 2026-08-12
+
+#### Changes
+- Bumped `@tailor-cms/*` CEK packages to 2.1.0
+- Server package spreads the manifest default export into `ServerModule`
+  (forwards `type`, `initState`, `mocks`, `ai`, `ui`, ... to the server
+  runtime) and no longer re-exports `type`, `initState` and `mocks`
+- Node 24 → Node 26 (`engines`, Dockerfile, devcontainer, CI)
+- pnpm 10 → pnpm 11 (`onlyBuiltDependencies` → `allowBuilds` in
+  `pnpm-workspace.yaml`)
+- Vite configs use `import.meta.dirname` instead of `__dirname`
+- Edit & display `types` point to `./dist/index.d.ts`
+- Bumped CLI dependencies (`chalk` 6, `degit` 3) and GitHub Actions
+
 ### v2.0.0 2026-04-09
 
 #### Breaking Changes
